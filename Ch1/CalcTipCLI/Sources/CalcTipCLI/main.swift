@@ -1,22 +1,14 @@
 import ArgumentParser
 
-func main() {
-    print("What is the amount?")
-    let priceInput = readLine() ?? ""
-    print("What is the percentage for the tip?")
-    let tipInput = readLine() ?? ""
-
-    let price = Double(priceInput)
-    let tip = Double(tipInput)
-
-    let tipAmount = price! * tip! * 0.01
-    let total = price! + tipAmount
-
-    print("tip is \(tipAmount)")
-    print("total  is \(total)")
+struct NonValidNumberError: Error {
+    let reason: String
 }
 
-// main()
+extension NonValidNumberError: CustomDebugStringConvertible {
+    var debugDescription: String {
+        return "Non Valid Number Error - \(reason)"
+    }
+}
 
 func getInputWithPrompt(_ prompt: String) throws -> Double {
     print("Enter \(prompt)", terminator: ": ")
@@ -27,16 +19,6 @@ func getInputWithPrompt(_ prompt: String) throws -> Double {
     }
     return amount
 
-}
-
-struct NonValidNumberError: Error {
-    let reason: String
-}
-
-extension NonValidNumberError: CustomDebugStringConvertible {
-    var debugDescription: String {
-        return "Non Valid Number Error - \(reason)"
-    }
 }
 
 struct TipCalc: ParsableCommand {

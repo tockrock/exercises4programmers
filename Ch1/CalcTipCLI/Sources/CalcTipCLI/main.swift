@@ -16,6 +16,20 @@ extension NonValidNumberError: CustomDebugStringConvertible {
     }
 }
 
+enum InputType {
+    case bill
+    case tip
+    
+    var name: String {
+        switch self {
+        case .bill:
+            return "bill amount"
+        case .tip:
+            return "tip"
+        }
+    }
+    
+}
 func getInputWithPrompt(_ prompt: String) throws -> String? {
     print("Enter \(prompt)", terminator: ": ")
     return readLine()
@@ -31,14 +45,14 @@ func convertInputToDouble(_ inputString: String) throws -> Double {
     return amount
 }
 
-func getInput(input: String?, prompt: String) -> Double {
+func getInput(forType: InputType, default input: String?) -> Double {
     var amount: Double?
     var inputString = input
     
     while amount == nil {
         if inputString == nil {
             // this is needed incase the input is provided as an argument
-            inputString = try? getInputWithPrompt(prompt)
+            inputString = try? getInputWithPrompt(forType.name)
         }
         do {
             amount = try convertInputToDouble(inputString!)
@@ -71,8 +85,8 @@ struct TipCalc: ParsableCommand {
     var tip: String?
     
     mutating func run() throws {
-        let billAmount = getInput(input: bill, prompt: "bill amount")
-        let tipRate = getInput(input: tip, prompt: "tip")
+        let billAmount = getInput(forType: .bill, default: bill)
+        let tipRate = getInput(forType: .tip, default: tip)
         
         let tipAmount = getTip(amount: billAmount, tip: tipRate)
         outputCurrency(name: "Tip Amount", amount: tipAmount)

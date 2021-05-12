@@ -1,4 +1,10 @@
+import Foundation
 import ArgumentParser
+
+let numberFormatter = NumberFormatter()
+
+numberFormatter.numberStyle = .currency
+numberFormatter.currencyCode = "USD"
 
 struct NonValidNumberError: Error {
     let reason: String
@@ -10,38 +16,61 @@ extension NonValidNumberError: CustomDebugStringConvertible {
     }
 }
 
-func getInputWithPrompt(_ prompt: String) throws -> Double {
+func getInputWithPrompt(_ prompt: String) throws -> String? {
     print("Enter \(prompt)", terminator: ": ")
-    let inputAmount = readLine() ?? ""
-    
-    guard let amount = Double(inputAmount) else {
-        throw NonValidNumberError(reason: "\(inputAmount) cannot be converted to double")
+    return readLine()
+}
+
+func convertInputToDouble(_ inputString: String) throws -> Double {
+    guard let amount = Double(inputString) else {
+        print("Error: \"\(inputString)\" is not valid. Try again.")
+        throw NonValidNumberError(reason: "\(inputString) cannot be converted to double")
     }
     return amount
-
 }
+
+func getInput(input: String?, prompt: String) -> Double {
+    var amount: Double?
+    var inputString = input
+    
+    while amount == nil {
+        if inputString == nil {
+            // this is needed incase the input is provided as an argument
+            inputString = try? getInputWithPrompt(prompt)
+        }
+        amount = try? convertInputToDouble(inputString!)
+        inputString = nil
+    }
+    
+    return amount!
+}
+
+func getTip(amount: Double, tip: Double) -> Double {
+    amount * tip * 0.01
+}
+
+func outputCurrency(name: String, amount: Double) {
+    let currency = numberFormatter.string(from: NSNumber(floatLiteral: amount))!
+    print("\(name): \(currency)")
+}
+
 
 struct TipCalc: ParsableCommand {
     
     @Option(name: .shortAndLong, help: "The charged price.")
-    var billAmount: String?
+    var bill: String?
     
     @Option(name: .shortAndLong, help: "The tip rate.")
     var tip: String?
     
     mutating func run() throws {
-//        while charged == nil {
-//            let chargeInput = getInputWithPrompt("bill amount")
-//        }
+        let billAmount = getInput(input: bill, prompt: "bill amaount")
+        let tipRate = getInput(input: tip, prompt: "tip")
         
-        do {
-            let amount = try getInputWithPrompt("bill amount")
-            print(amount)
-        }
-        catch {
-            print("Error: \(error)")
-            return
-        }
+        let tipAmount = getTip(amount: billAmount, tip: tipRate)
+        outputCurrency(name: "Tip Amount", amount: tipAmount)
+        let totalAmount = billAmount + tipAmount
+        outputCurrency(name: "Total", amount: totalAmount)
         
     }
     

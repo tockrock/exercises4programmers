@@ -12,7 +12,7 @@ struct NonValidNumberError: Error {
 
 extension NonValidNumberError: CustomDebugStringConvertible {
     var debugDescription: String {
-        return "Non Valid Number Error - \(reason)"
+        return "Non Valid Number Error: \(reason)"
     }
 }
 
@@ -23,8 +23,10 @@ func getInputWithPrompt(_ prompt: String) throws -> String? {
 
 func convertInputToDouble(_ inputString: String) throws -> Double {
     guard let amount = Double(inputString) else {
-        print("Error: \"\(inputString)\" is not valid. Try again.")
-        throw NonValidNumberError(reason: "\(inputString) cannot be converted to double")
+        throw NonValidNumberError(reason: "\"\(inputString)\" cannot be converted to double")
+    }
+    guard amount >= 0 else {
+        throw NonValidNumberError(reason: "\"\(inputString)\" cannot be negative")
     }
     return amount
 }
@@ -38,8 +40,13 @@ func getInput(input: String?, prompt: String) -> Double {
             // this is needed incase the input is provided as an argument
             inputString = try? getInputWithPrompt(prompt)
         }
-        amount = try? convertInputToDouble(inputString!)
-        inputString = nil
+        do {
+            amount = try convertInputToDouble(inputString!)
+        }
+        catch {
+            print("\(error). Try Again!")
+            inputString = nil
+        }
     }
     
     return amount!
@@ -64,7 +71,7 @@ struct TipCalc: ParsableCommand {
     var tip: String?
     
     mutating func run() throws {
-        let billAmount = getInput(input: bill, prompt: "bill amaount")
+        let billAmount = getInput(input: bill, prompt: "bill amount")
         let tipRate = getInput(input: tip, prompt: "tip")
         
         let tipAmount = getTip(amount: billAmount, tip: tipRate)

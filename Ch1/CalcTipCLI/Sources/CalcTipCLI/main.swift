@@ -56,16 +56,6 @@ func getInputWithPrompt(_ prompt: String) throws -> String? {
     return readLine()
 }
 
-func convertInputToDouble(_ inputString: String) throws -> Double {
-    guard let amount = Double(inputString) else {
-        throw NonValidNumberError(reason: "\"\(inputString)\" cannot be converted to double")
-    }
-    guard amount >= 0 else {
-        throw NonValidNumberError(reason: "\"\(inputString)\" cannot be negative")
-    }
-    return amount
-}
-
 func getInput(inputType: InputType, default input: String?) -> Double {
     var amount: Double?
     var inputString = input

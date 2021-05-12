@@ -20,6 +20,9 @@ enum InputType {
     case bill
     case tip
     
+}
+
+extension InputType {
     var name: String {
         switch self {
         case .bill:
@@ -28,7 +31,6 @@ enum InputType {
             return "tip"
         }
     }
-    
 }
 
 func getInputWithPrompt(_ prompt: String) throws -> String? {

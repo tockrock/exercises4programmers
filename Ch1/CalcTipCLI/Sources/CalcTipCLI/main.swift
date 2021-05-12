@@ -30,6 +30,7 @@ enum InputType {
     }
     
 }
+
 func getInputWithPrompt(_ prompt: String) throws -> String? {
     print("Enter \(prompt)", terminator: ": ")
     return readLine()
@@ -45,14 +46,14 @@ func convertInputToDouble(_ inputString: String) throws -> Double {
     return amount
 }
 
-func getInput(forType: InputType, default input: String?) -> Double {
+func getInput(inputType: InputType, default input: String?) -> Double {
     var amount: Double?
     var inputString = input
     
     while amount == nil {
         if inputString == nil {
             // this is needed incase the input is provided as an argument
-            inputString = try? getInputWithPrompt(forType.name)
+            inputString = try? getInputWithPrompt(inputType.name)
         }
         do {
             amount = try convertInputToDouble(inputString!)
@@ -85,8 +86,8 @@ struct TipCalc: ParsableCommand {
     var tip: String?
     
     mutating func run() throws {
-        let billAmount = getInput(forType: .bill, default: bill)
-        let tipRate = getInput(forType: .tip, default: tip)
+        let billAmount = getInput(inputType: .bill, default: bill)
+        let tipRate = getInput(inputType: .tip, default: tip)
         
         let tipAmount = getTip(amount: billAmount, tip: tipRate)
         outputCurrency(name: "Tip Amount", amount: tipAmount)

@@ -19,16 +19,6 @@ extension NonValidNumberError: CustomDebugStringConvertible {
 enum InputType {
     case bill
     case tip
-    
-    func validate(_ inputString: String) throws -> Double {
-        guard let amount = Double(inputString) else {
-            throw NonValidNumberError(reason: "\"\(inputString)\" cannot be converted to double")
-        }
-        guard amount >= 0 else {
-            throw NonValidNumberError(reason: "\"\(inputString)\" cannot be negative")
-        }
-        return amount
-    }
 }
 
 extension InputType {
@@ -39,6 +29,25 @@ extension InputType {
         case .tip:
             return "tip"
         }
+    }
+}
+
+extension InputType {
+    func validate(_ inputString: String) throws -> Double {
+        guard let amount = Double(inputString) else {
+            throw NonValidNumberError(reason: "can't convert to double \"\(inputString)\"")
+        }
+        guard amount >= 0 else {
+            throw NonValidNumberError(reason: "can't be negative \"\(inputString)\"")
+        }
+        
+        if self == .tip {
+            guard amount < 100 else {
+                throw NonValidNumberError(reason: "\(self.name) can't be over 100 \"\(inputString)\"")
+            }
+        }
+        
+        return amount
     }
 }
 

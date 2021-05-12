@@ -51,9 +51,9 @@ extension InputType {
     }
 }
 
-func getInputWithPrompt(_ prompt: String) throws -> String? {
+func getInputWithPrompt(_ prompt: String) -> String {
     print("Enter \(prompt)", terminator: ": ")
-    return readLine()
+    return readLine() ?? ""
 }
 
 func getInput(inputType: InputType, default input: String?) -> Double {
@@ -61,10 +61,11 @@ func getInput(inputType: InputType, default input: String?) -> Double {
     var inputString = input
     
     while amount == nil {
+        // this is needed incase the input is provided as an argument
         if inputString == nil {
-            // this is needed incase the input is provided as an argument
-            inputString = try? getInputWithPrompt(inputType.name)
+            inputString = getInputWithPrompt(inputType.name)
         }
+        
         do {
             amount = try inputType.validate(inputString!)
         }

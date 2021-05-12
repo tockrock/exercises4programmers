@@ -20,6 +20,15 @@ enum InputType {
     case bill
     case tip
     
+    func validate(_ inputString: String) throws -> Double {
+        guard let amount = Double(inputString) else {
+            throw NonValidNumberError(reason: "\"\(inputString)\" cannot be converted to double")
+        }
+        guard amount >= 0 else {
+            throw NonValidNumberError(reason: "\"\(inputString)\" cannot be negative")
+        }
+        return amount
+    }
 }
 
 extension InputType {
@@ -58,7 +67,7 @@ func getInput(inputType: InputType, default input: String?) -> Double {
             inputString = try? getInputWithPrompt(inputType.name)
         }
         do {
-            amount = try convertInputToDouble(inputString!)
+            amount = try inputType.validate(inputString!)
         }
         catch {
             print("\(error). Try Again!")

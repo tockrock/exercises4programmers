@@ -3,22 +3,9 @@ import class Foundation.Bundle
 
 final class CalcTipCLITests: XCTestCase {
     func testHappyPath() throws {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct
-        // results.
-
-        // Some of the APIs that we use below are available in macOS 10.13 and above.
-        guard #available(macOS 10.13, *) else {
-            return
-        }
-
-        // Mac Catalyst won't have `Process`, but it is supported for executables.
-        #if !targetEnvironment(macCatalyst)
-        
         let result = try runProcess(arguments: ["-b", "1000", "-t", "15"])
 
         XCTAssertEqual(result, "Tip Amount: $150.00\nTotal: $1,150.00\n")
-        #endif
     }
     
     func runProcess(arguments: [String]) throws -> String? {

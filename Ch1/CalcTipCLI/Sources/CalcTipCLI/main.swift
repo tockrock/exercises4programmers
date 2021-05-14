@@ -56,7 +56,7 @@ func getInputWithPrompt(_ prompt: String) -> String {
     return readLine() ?? ""
 }
 
-func getInput(inputType: InputType, default input: String?) -> Double {
+func getInput(inputType: InputType, default input: String?, response: Bool = false) throws -> Double {
     var amount: Double?
     var inputString = input
     
@@ -70,6 +70,9 @@ func getInput(inputType: InputType, default input: String?) -> Double {
             amount = try inputType.validate(inputString!)
         }
         catch {
+            if response {
+                throw error
+            }
             print("\(error). Try Again!")
             inputString = nil
         }
@@ -89,16 +92,27 @@ func outputCurrency(name: String, amount: Double) {
 
 
 struct TipCalc: ParsableCommand {
-    
     @Option(name: .shortAndLong, help: "The charged price.")
     var bill: String?
     
     @Option(name: .shortAndLong, help: "The tip rate.")
     var tip: String?
     
+    @Flag(name: .shortAndLong, help: "Returns the errors, instead of asking for the correct result.")
+    var response: Bool = false
+    
     mutating func run() throws {
-        let billAmount = getInput(inputType: .bill, default: bill)
-        let tipRate = getInput(inputType: .tip, default: tip)
+        let billAmount: Double
+        let tipRate: Double
+        
+        do {
+            billAmount = try getInput(inputType: .bill, default: bill, response: response)
+            tipRate = try getInput(inputType: .tip, default: tip, response: response)
+        }
+        catch {
+            print(error)
+            return
+        }
         
         let tipAmount = getTip(amount: billAmount, tip: tipRate)
         outputCurrency(name: "Tip Amount", amount: tipAmount)

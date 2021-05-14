@@ -14,25 +14,30 @@ final class CalcTipCLITests: XCTestCase {
 
         // Mac Catalyst won't have `Process`, but it is supported for executables.
         #if !targetEnvironment(macCatalyst)
+        
+        let result = try runProcess(arguments: ["-b", "1000", "-t", "15"])
 
-        let fooBinary = productsDirectory.appendingPathComponent("calctip")
-
+        XCTAssertEqual(result, "Tip Amount: $150.00\nTotal: $1,150.00\n")
+        #endif
+    }
+    
+    func runProcess(arguments: [String]) throws -> String? {
+        let binary = productsDirectory.appendingPathComponent("calctip")
+        
         let process = Process()
-        process.executableURL = fooBinary
-
+        process.executableURL = binary
+        
         let pipe = Pipe()
         process.standardOutput = pipe
         
-        process.arguments = ["-b", "1000", "-t", "15"]
-
+        process.arguments = arguments
+        
         try process.run()
         process.waitUntilExit()
 
         let data = pipe.fileHandleForReading.readDataToEndOfFile()
-        let output = String(data: data, encoding: .utf8)
-
-        XCTAssertEqual(output, "Tip Amount: $150.00\nTotal: $1,150.00\n")
-        #endif
+        return String(data: data, encoding: .utf8)
+        
     }
 
     /// Returns path to the built products directory.

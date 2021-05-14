@@ -15,13 +15,16 @@ final class CalcTipCLITests: XCTestCase {
         // Mac Catalyst won't have `Process`, but it is supported for executables.
         #if !targetEnvironment(macCatalyst)
 
-        let fooBinary = productsDirectory.appendingPathComponent("CalcTipCLI")
+        let fooBinary = productsDirectory.appendingPathComponent("calctip")
+        print(fooBinary)
 
         let process = Process()
         process.executableURL = fooBinary
 
         let pipe = Pipe()
         process.standardOutput = pipe
+        
+        process.arguments = ["-b", "1000", "-t", "15"]
 
         try process.run()
         process.waitUntilExit()

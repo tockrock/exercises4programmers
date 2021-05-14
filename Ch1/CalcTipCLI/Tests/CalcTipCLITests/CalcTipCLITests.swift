@@ -2,7 +2,7 @@ import XCTest
 import class Foundation.Bundle
 
 final class CalcTipCLITests: XCTestCase {
-    func testExample() throws {
+    func testHappyPath() throws {
         // This is an example of a functional test case.
         // Use XCTAssert and related functions to verify your tests produce the correct
         // results.
@@ -16,7 +16,6 @@ final class CalcTipCLITests: XCTestCase {
         #if !targetEnvironment(macCatalyst)
 
         let fooBinary = productsDirectory.appendingPathComponent("calctip")
-        print(fooBinary)
 
         let process = Process()
         process.executableURL = fooBinary
@@ -32,7 +31,7 @@ final class CalcTipCLITests: XCTestCase {
         let data = pipe.fileHandleForReading.readDataToEndOfFile()
         let output = String(data: data, encoding: .utf8)
 
-        XCTAssertEqual(output, "Hello, world!\n")
+        XCTAssertEqual(output, "Tip Amount: $150.00\nTotal: $1,150.00\n")
         #endif
     }
 

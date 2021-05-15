@@ -13,6 +13,9 @@ struct ContentView {
 
 extension ContentView: View {
     var body: some View {
+        TextField("Billed Amount",
+                  text: $bill)
+        
         Text("Hello, world!")
             .padding()
     }

@@ -104,10 +104,16 @@ struct TipCalc: ParsableCommand {
     mutating func run() throws {
         let billAmount: Double
         let tipRate: Double
-
-        billAmount = try getInput(inputType: .bill, default: bill, response: response)
-        tipRate = try getInput(inputType: .tip, default: tip, response: response)
-
+        
+        do {
+            billAmount = try getInput(inputType: .bill, default: bill, response: response)
+            tipRate = try getInput(inputType: .tip, default: tip, response: response)
+        }
+        catch {
+            print(error)
+            return
+        }
+        
         let tipAmount = getTip(amount: billAmount, tip: tipRate)
         outputCurrency(name: "Tip Amount", amount: tipAmount)
         let totalAmount = billAmount + tipAmount

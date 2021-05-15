@@ -8,6 +8,11 @@ final class CalcTipCLITests: XCTestCase {
         XCTAssertEqual(result, "Tip Amount: $150.00\nTotal: $1,150.00\n")
     }
     
+    func testNonNumbericalBill() throws {
+        let result = try runProcess(arguments: ["-b", "abcd", "-r"])
+        XCTAssertEqual(result, "Non Valid Number Error: can't convert to double \"abcd\"\n")        
+    }
+    
     func runProcess(arguments: [String]) throws -> String? {
         let binary = productsDirectory.appendingPathComponent("calctip")
         

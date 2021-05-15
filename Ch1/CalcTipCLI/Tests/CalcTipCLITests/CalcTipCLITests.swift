@@ -3,14 +3,15 @@ import class Foundation.Bundle
 
 final class CalcTipCLITests: XCTestCase {
     func testHappyPath() throws {
-        let result = try runProcess(arguments: ["-b", "1000", "-t", "15"])
+        let result = try runProcess(arguments: argumentHelper())
 
         XCTAssertEqual(result, "Tip Amount: $150.00\nTotal: $1,150.00\n")
     }
     
     func testNonNumbericalBill() throws {
-        let result = try runProcess(arguments: ["-b", "abcd", "-r"])
-        XCTAssertEqual(result, "Non Valid Number Error: can't convert to double \"abcd\"\n")        
+        let bill = "abcde"
+        let result = try runProcess(arguments: argumentHelper(bill: bill))
+        XCTAssertEqual(result, "Non Valid Number Error: can't convert to double \"\(bill)\"\n")
     }
     
     func runProcess(arguments: [String]) throws -> String? {
@@ -30,6 +31,14 @@ final class CalcTipCLITests: XCTestCase {
         let data = pipe.fileHandleForReading.readDataToEndOfFile()
         return String(data: data, encoding: .utf8)
         
+    }
+    
+    func argumentHelper(bill: String = "1000", tip: String = "15", response: Bool = true) -> [String] {
+        var arguments = ["-b", String(bill), "-t", String(tip)]
+        if response {
+            arguments.append("-r")
+        }
+        return arguments
     }
 
     /// Returns path to the built products directory.

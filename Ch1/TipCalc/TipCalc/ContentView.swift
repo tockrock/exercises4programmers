@@ -7,7 +7,11 @@
 
 import SwiftUI
 
-struct ContentView: View {
+struct ContentView {
+    @State private var bill = ""
+}
+
+extension ContentView: View {
     var body: some View {
         Text("Hello, world!")
             .padding()

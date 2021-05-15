@@ -14,6 +14,18 @@ final class CalcTipCLITests: XCTestCase {
         XCTAssertEqual(result, "Non Valid Number Error: can't convert to double \"\(bill)\"\n")
     }
     
+    func testNonNumbericalTip() throws {
+        let tip = "foobar"
+        let result = try runProcess(arguments: argumentHelper(tip: tip))
+        XCTAssertEqual(result, "Non Valid Number Error: can't convert to double \"\(tip)\"\n")
+    }
+    
+    func testTipTooHigh() throws {
+        let tip = "1000"
+        let result = try runProcess(arguments: argumentHelper(tip: tip))
+        XCTAssertEqual(result, "Non Valid Number Error: tip can't be over 100 \"\(tip)\"\n")
+    }
+
     func runProcess(arguments: [String]) throws -> String? {
         let binary = productsDirectory.appendingPathComponent("calctip")
         

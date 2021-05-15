@@ -25,6 +25,15 @@ final class CalcTipCLITests: XCTestCase {
         let result = try runProcess(arguments: argumentHelper(tip: tip))
         XCTAssertEqual(result, "Non Valid Number Error: tip can't be over 100 \"\(tip)\"\n")
     }
+    
+    func testNegativeBil() throws {
+        let bill = "-4000"
+        let result = try runProcess(arguments: argumentHelper(bill: bill))
+        guard  result != "" else {
+            throw XCTSkip("Cannot enter negative number as an argument.")
+        }
+        XCTAssertEqual(result, "Non Valid Number Error: can't be negative \"\(bill)\"\n")
+    }
 
     func runProcess(arguments: [String]) throws -> String? {
         let binary = productsDirectory.appendingPathComponent("calctip")

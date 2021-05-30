@@ -17,15 +17,21 @@ struct CalculatorView {
 
 extension CalculatorView: View {
     var body: some View {
-        VStack {
+        VStack {            
             TextField("Amount Billed", text: $tipCalc.amount)
                 .keyboardType(.decimalPad)
-                .padding()
+
+            if tipCalc.isAmountValidated {
+                Text("Billed Amount: \(tipCalc.displayAmount)")
+            } else {
+                Text("Invalid Amount: \(tipCalc.amount)")
+                    .foregroundColor(.red)
+            }
             
             Slider(value: $tipCalc.tip,
                    in: min...max)
             
-            Text("Tip: \(tipCalc.rounded_tip)%")
+            Text("Tip: \(tipCalc.roundedTip)%")
                 .padding(.bottom)
             
             Text("Tip Amount: \(tipCalc.tipAmount)")

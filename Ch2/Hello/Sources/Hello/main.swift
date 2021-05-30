@@ -10,8 +10,11 @@ struct Hello: ParsableCommand {
             name = "World"
         }
         
-        
-        print("Hello \(name), nice to meet you!")
+        if name == "Takeshi" {
+            print("Welcom back, master ;)")
+        } else {
+            print("Hello \(name), nice to meet you!")
+        }
     }
 }
 

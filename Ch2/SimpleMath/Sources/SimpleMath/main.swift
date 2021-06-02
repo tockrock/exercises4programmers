@@ -26,19 +26,17 @@ func askNumber(_ name: String) -> Double {
     while true {
         let input = ask("What is the \(name) number?")
         
-        let number = Double(input)
-        
-        guard number != nil else {
+        guard let number: Double = Double(input) else {
             print("Expecting a number.", terminator: " ")
             continue
         }
         
-        guard number! > 0 else {
+        guard number > 0 else {
             print("Expecting a positive number.", terminator: " ")
             continue
         }
         
-        return number!
+        return number
     }
 }
 

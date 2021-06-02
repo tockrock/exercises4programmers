@@ -23,7 +23,7 @@ func ask(_ question: String, fallback: String = "") -> String {
 }
 
 func askNumber(_ name: String) -> Double {
-    var number: Double? = nil
+    var number: Double?
     while number == nil {
         let input = ask("What is the \(name) number?")
         

@@ -24,18 +24,19 @@ func ask(_ question: String, fallback: String = "") -> String {
 
 func askNumber(_ name: String) -> Double {
     var number: Double? = nil
-    validator: while number == nil {
+    while number == nil {
         let input = ask("What is the \(name) number?")
         
         guard let number_input = Double(input) else {
             print("Expecting a number.", terminator: " ")
-            continue validator
+            continue
         }
         
         guard !(number_input < 0) else {
             print("Expecting a positive number.", terminator: " ")
-            continue validator
+            continue
         }
+        
         number = number_input
     }
     return number!

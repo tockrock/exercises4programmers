@@ -17,7 +17,10 @@ let package = Package(
             name: "quote-printer",
             dependencies: [
                 .product(name: "ArgumentParser", package: "swift-argument-parser"),
-            ]),
+            ],
+            resources: [
+                .process("quotes.json")]
+        ),
         .testTarget(
             name: "quote-printerTests",
             dependencies: ["quote-printer"]),

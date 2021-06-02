@@ -23,11 +23,10 @@ func ask(_ question: String, fallback: String = "") -> String {
 }
 
 func askNumber(_ name: String) -> Double {
-    var number: Double?
-    while number == nil {
+    while true {
         let input = ask("What is the \(name) number?")
         
-        number = Double(input)
+        let number = Double(input)
         
         guard number != nil else {
             print("Expecting a number.", terminator: " ")
@@ -35,12 +34,12 @@ func askNumber(_ name: String) -> Double {
         }
         
         guard number! > 0 else {
-            number = nil
             print("Expecting a positive number.", terminator: " ")
             continue
         }
+        
+        return number!
     }
-    return number!
 }
 
 SimpleMath.main()

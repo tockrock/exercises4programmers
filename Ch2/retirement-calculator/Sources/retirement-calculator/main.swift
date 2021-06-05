@@ -30,7 +30,12 @@ struct retirementCalculator: ParsableCommand {
     func run() throws {
         let age = intFromInput("What is your current age?")
         let retirement = intFromInput("At what age would you like to retire?")
-
+        
+        guard age < retirement else {
+            print("You should already retire!")
+            return
+        }
+        
         let years = retirement - age
         
         let date = Date()

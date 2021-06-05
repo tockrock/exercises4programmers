@@ -1,3 +1,4 @@
+import Foundation
 import ArgumentParser
 
 func ask(_ question: String, fallback: String = "") -> String {
@@ -32,7 +33,10 @@ struct retirementCalculator: ParsableCommand {
 
         let years = retirement - age
         
-        let current_year = 2022
+        let date = Date()
+        let calendar = Calendar.current
+        
+        let current_year = calendar.component(.year, from: date)
         
         print("You have \(years) years left until you can retire")
         print("It's \(current_year), so you can retire in \(current_year + years).")

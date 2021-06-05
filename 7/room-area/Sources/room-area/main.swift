@@ -26,6 +26,12 @@ func askForInt(_ question: String) -> Int {
 
 struct roomArea : ParsableCommand {
     func run() throws {
+        
+        guard #available(macOS 10.12, *) else {
+            print("Sorry your system is not supported")
+            return
+        }
+        
         let length = askForInt("What is the length of the room in feet?")
         let width = askForInt("What is the width of the room in feet?")
         let area = length * width
@@ -34,16 +40,11 @@ struct roomArea : ParsableCommand {
         print("You entered dimensions of \(length) feet by \(width) feet.")
         print("The area is:")
         
-        if #available(macOS 10.12, *) {
-            let unitArea = Measurement(value: Double(area), unit: UnitArea.squareFeet)
-            let converted = unitArea.converted(to: .squareMeters)
-            
-            print(unitArea)
-            print(converted)
-            
-        } else {
-            // Fallback on earlier versions
-        }
+        let unitArea = Measurement(value: Double(area), unit: UnitArea.squareFeet)
+        let converted = unitArea.converted(to: .squareMeters)
+        
+        print(unitArea)
+        print(converted)
         
         
     }

@@ -40,6 +40,13 @@ enum State {
             return "Valid Input"
         }
     }
+    
+    var validation: Bool {
+        if self == .correct {
+            return true
+        }
+        return false
+    }
         
 }
 

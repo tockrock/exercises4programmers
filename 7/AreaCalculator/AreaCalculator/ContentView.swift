@@ -10,7 +10,7 @@ import SwiftUI
 struct ContentView {
     @StateObject var length = inputHandler()
     @StateObject var width = inputHandler()
-    var unit = UnitHandler.meter
+    @State private var unit: UnitHandler = .meter
     
     var valid: Bool {
         return length.state.valid && width.state.valid
@@ -21,9 +21,14 @@ struct ContentView {
 
 extension ContentView: View {
     var body: some View {
-        
-        
         VStack {
+            Picker("Unit", selection: $unit) {
+                Text("Meter").tag(UnitHandler.meter)
+                Text("Feet").tag(UnitHandler.feet)
+            }
+            .pickerStyle(SegmentedPickerStyle())
+            .padding()
+            
             TextField("Length", text: $length.input)
             Text(length.state.warning)
                 .foregroundColor(length.state.color)

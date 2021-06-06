@@ -45,7 +45,7 @@ enum UnitHandler {
 
 }
 
-enum State {
+enum InputState {
     case empty
     case nonNumerical
     case notPositive
@@ -91,7 +91,7 @@ class inputHandler: ObservableObject {
     }
     var value: Double = 0.0
     
-    @Published var state: State = .empty
+    @Published var state: InputState = .empty
     
     func validate() {
         guard input.count > 0 else {

@@ -55,8 +55,11 @@ enum specifiedUnit {
             return .squareFeet
         }
     }
+    
+    func wrap(_ value: Double) -> Measurement<UnitLength> {
+        return Measurement(value: value, unit: self.unit)
+    }
 }
-
 
 struct roomArea : ParsableCommand {
     @Flag(name: .shortAndLong, help: "Enter feats instead")
@@ -76,7 +79,7 @@ struct roomArea : ParsableCommand {
         let area = length * width
 
         
-        print("You entered dimensions of \(length) \(unit) by \(width) \(unit).")
+        print("You entered dimensions of \(unit.wrap(length)) by \(unit.wrap(width)).")
         print("The area is:")
         
         let unitArea = Measurement(value: area, unit: unit.areaUnit)

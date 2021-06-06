@@ -24,7 +24,44 @@ func askForInt(_ question: String) -> Int {
     }
 }
 
+@available(macOS 10.12, *)
+enum specifiedUnit {
+    case feet
+    case meter
+    
+    var unit: UnitLength {
+        switch self {
+        case .feet:
+            return .feet
+        case .meter:
+            return .meters
+        }
+    }
+    
+    var areaUnit: UnitArea {
+        switch self {
+        case .feet:
+            return .squareFeet
+        case .meter:
+            return .squareMeters
+        }
+    }
+    
+    var convertUnit: UnitArea {
+        switch self {
+        case .feet:
+            return .squareMeters
+        case .meter:
+            return .squareFeet
+        }
+    }
+}
+
+
 struct roomArea : ParsableCommand {
+    @Flag(name: .shortAndLong, help: "Enter feats instead")
+    var feats = false
+
     func run() throws {
         
         guard #available(macOS 10.12, *) else {
@@ -32,16 +69,18 @@ struct roomArea : ParsableCommand {
             return
         }
         
-        let length = askForInt("What is the length of the room in feet?")
-        let width = askForInt("What is the width of the room in feet?")
+        let unit: specifiedUnit = feats ? .feet : .meter
+        
+        let length = askForInt("What is the length of the room in \(unit)?")
+        let width = askForInt("What is the width of the room in \(unit)?")
         let area = length * width
 
         
-        print("You entered dimensions of \(length) feet by \(width) feet.")
+        print("You entered dimensions of \(length) \(unit) by \(width) \(unit).")
         print("The area is:")
         
-        let unitArea = Measurement(value: Double(area), unit: UnitArea.squareFeet)
-        let converted = unitArea.converted(to: .squareMeters)
+        let unitArea = Measurement(value: Double(area), unit: unit.areaUnit)
+        let converted = unitArea.converted(to: unit.convertUnit)
         
         print(unitArea)
         print(converted)

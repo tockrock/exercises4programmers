@@ -6,11 +6,11 @@ func ask(_ question: String, fallback: String = "") -> String {
     return readLine() ?? fallback
 }
 
-func askForInt(_ question: String) -> Int {
+func askForDouble(_ question: String) -> Double {
     while true {
         let input = ask(question)
         
-        guard let number: Int = Int(input) else {
+        guard let number: Double = Double(input) else {
             print("Please enter a number.", terminator: " ")
             continue
         }
@@ -71,15 +71,15 @@ struct roomArea : ParsableCommand {
         
         let unit: specifiedUnit = feats ? .feet : .meter
         
-        let length = askForInt("What is the length of the room in \(unit)?")
-        let width = askForInt("What is the width of the room in \(unit)?")
+        let length = askForDouble("What is the length of the room in \(unit)?")
+        let width = askForDouble("What is the width of the room in \(unit)?")
         let area = length * width
 
         
         print("You entered dimensions of \(length) \(unit) by \(width) \(unit).")
         print("The area is:")
         
-        let unitArea = Measurement(value: Double(area), unit: unit.areaUnit)
+        let unitArea = Measurement(value: area, unit: unit.areaUnit)
         let converted = unitArea.converted(to: unit.convertUnit)
         
         print(unitArea)

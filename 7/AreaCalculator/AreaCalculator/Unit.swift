@@ -11,6 +11,38 @@ import SwiftUI
 enum Unit {
     case feet
     case meter
+    
+    var actual: UnitLength {
+        switch self {
+        case .feet:
+            return .feet
+        case .meter:
+            return .meters
+        }
+    }
+    
+    var areaUnit: UnitArea {
+        switch self {
+        case .feet:
+            return .squareFeet
+        case .meter:
+            return .squareMeters
+        }
+    }
+    
+    var convertUnit: UnitArea {
+        switch self {
+        case .feet:
+            return .squareMeters
+        case .meter:
+            return .squareFeet
+        }
+    }
+    
+    func wrap(_ value: Double) -> Measurement<UnitLength> {
+        return Measurement(value: value, unit: self.actual)
+    }
+
 }
 
 enum State {

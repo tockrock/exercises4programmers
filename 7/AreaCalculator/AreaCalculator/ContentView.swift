@@ -11,6 +11,10 @@ struct ContentView {
     @StateObject var length = inputHandler()
     @StateObject var width = inputHandler()
     
+    var valid: Bool {
+        return length.state.valid && width.state.valid
+        
+    }
     
 }
 
@@ -25,6 +29,12 @@ extension ContentView: View {
             TextField("Width", text: $width.input)
             Text(width.state.warning)
                 .foregroundColor(width.state.color)
+            
+            VStack {
+                Text("Hello World")
+                Text("Another Worlds")
+            }
+            .foregroundColor(valid ? .primary : .clear)
             
         }
         .padding()

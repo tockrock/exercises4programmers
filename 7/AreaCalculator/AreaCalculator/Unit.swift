@@ -41,7 +41,7 @@ enum State {
         }
     }
     
-    var validation: Bool {
+    var valid: Bool {
         if self == .correct {
             return true
         }

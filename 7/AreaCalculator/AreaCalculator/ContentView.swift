@@ -10,6 +10,7 @@ import SwiftUI
 struct ContentView {
     @StateObject var length = inputHandler()
     @StateObject var width = inputHandler()
+    var unit = UnitHandler.meter
     
     var valid: Bool {
         return length.state.valid && width.state.valid

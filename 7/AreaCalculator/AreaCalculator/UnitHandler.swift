@@ -8,7 +8,7 @@
 import Foundation
 import SwiftUI
 
-enum Unit {
+enum UnitHandler {
     case feet
     case meter
     
@@ -111,5 +111,17 @@ class inputHandler: ObservableObject {
         
         value = input
         state = .correct
+    }
+}
+
+struct area {
+    let value: Double
+    let unit: UnitHandler
+    
+    var baseArea: Measurement<UnitArea> {
+        return Measurement(value: value, unit: unit.areaUnit)
+    }
+    var convertedArea: Measurement<UnitArea> {
+        return baseArea.converted(to: unit.convertUnit)
     }
 }

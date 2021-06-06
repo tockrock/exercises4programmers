@@ -31,9 +31,10 @@ extension ContentView: View {
             Text(width.state.warning)
                 .foregroundColor(width.state.color)
             
+            let area = Area(value: width.value * length.value, unit: unit)
             VStack {
-                Text("Hello World")
-                Text("Another Worlds")
+                Text("\(area.baseArea.description)")
+                Text("\(area.convertedArea.description)")
             }
             .foregroundColor(valid ? .primary : .clear)
             

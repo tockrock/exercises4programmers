@@ -114,7 +114,7 @@ class inputHandler: ObservableObject {
     }
 }
 
-struct area {
+struct Area {
     let value: Double
     let unit: UnitHandler
     

@@ -13,6 +13,8 @@
 		0255800A266C5567006C3DCB /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 02558009266C5567006C3DCB /* Preview Assets.xcassets */; };
 		02558015266C5567006C3DCB /* AreaCalculatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02558014266C5567006C3DCB /* AreaCalculatorTests.swift */; };
 		02558020266C5567006C3DCB /* AreaCalculatorUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0255801F266C5567006C3DCB /* AreaCalculatorUITests.swift */; };
+		0255802E266C5645006C3DCB /* Unit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0255802D266C5645006C3DCB /* Unit.swift */; };
+		02558030266C5D7E006C3DCB /* InputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0255802F266C5D7E006C3DCB /* InputView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +47,8 @@
 		0255801B266C5567006C3DCB /* AreaCalculatorUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AreaCalculatorUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0255801F266C5567006C3DCB /* AreaCalculatorUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AreaCalculatorUITests.swift; sourceTree = "<group>"; };
 		02558021266C5567006C3DCB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0255802D266C5645006C3DCB /* Unit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Unit.swift; sourceTree = "<group>"; };
+		0255802F266C5D7E006C3DCB /* InputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +101,8 @@
 			children = (
 				02558002266C5566006C3DCB /* AreaCalculatorApp.swift */,
 				02558004266C5566006C3DCB /* ContentView.swift */,
+				0255802F266C5D7E006C3DCB /* InputView.swift */,
+				0255802D266C5645006C3DCB /* Unit.swift */,
 				02558006266C5567006C3DCB /* Assets.xcassets */,
 				0255800B266C5567006C3DCB /* Info.plist */,
 				02558008266C5567006C3DCB /* Preview Content */,
@@ -259,6 +265,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0255802E266C5645006C3DCB /* Unit.swift in Sources */,
+				02558030266C5D7E006C3DCB /* InputView.swift in Sources */,
 				02558005266C5566006C3DCB /* ContentView.swift in Sources */,
 				02558003266C5566006C3DCB /* AreaCalculatorApp.swift in Sources */,
 			);

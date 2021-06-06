@@ -1,0 +1,585 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		02558003266C5566006C3DCB /* AreaCalculatorApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02558002266C5566006C3DCB /* AreaCalculatorApp.swift */; };
+		02558005266C5566006C3DCB /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02558004266C5566006C3DCB /* ContentView.swift */; };
+		02558007266C5567006C3DCB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 02558006266C5567006C3DCB /* Assets.xcassets */; };
+		0255800A266C5567006C3DCB /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 02558009266C5567006C3DCB /* Preview Assets.xcassets */; };
+		02558015266C5567006C3DCB /* AreaCalculatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02558014266C5567006C3DCB /* AreaCalculatorTests.swift */; };
+		02558020266C5567006C3DCB /* AreaCalculatorUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0255801F266C5567006C3DCB /* AreaCalculatorUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		02558011266C5567006C3DCB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 02557FF7266C5566006C3DCB /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 02557FFE266C5566006C3DCB;
+			remoteInfo = AreaCalculator;
+		};
+		0255801C266C5567006C3DCB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 02557FF7266C5566006C3DCB /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 02557FFE266C5566006C3DCB;
+			remoteInfo = AreaCalculator;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		02557FFF266C5566006C3DCB /* AreaCalculator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AreaCalculator.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		02558002266C5566006C3DCB /* AreaCalculatorApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AreaCalculatorApp.swift; sourceTree = "<group>"; };
+		02558004266C5566006C3DCB /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		02558006266C5567006C3DCB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		02558009266C5567006C3DCB /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		0255800B266C5567006C3DCB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		02558010266C5567006C3DCB /* AreaCalculatorTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AreaCalculatorTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		02558014266C5567006C3DCB /* AreaCalculatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AreaCalculatorTests.swift; sourceTree = "<group>"; };
+		02558016266C5567006C3DCB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0255801B266C5567006C3DCB /* AreaCalculatorUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AreaCalculatorUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		0255801F266C5567006C3DCB /* AreaCalculatorUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AreaCalculatorUITests.swift; sourceTree = "<group>"; };
+		02558021266C5567006C3DCB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		02557FFC266C5566006C3DCB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0255800D266C5567006C3DCB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		02558018266C5567006C3DCB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		02557FF6266C5566006C3DCB = {
+			isa = PBXGroup;
+			children = (
+				02558001266C5566006C3DCB /* AreaCalculator */,
+				02558013266C5567006C3DCB /* AreaCalculatorTests */,
+				0255801E266C5567006C3DCB /* AreaCalculatorUITests */,
+				02558000266C5566006C3DCB /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		02558000266C5566006C3DCB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				02557FFF266C5566006C3DCB /* AreaCalculator.app */,
+				02558010266C5567006C3DCB /* AreaCalculatorTests.xctest */,
+				0255801B266C5567006C3DCB /* AreaCalculatorUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		02558001266C5566006C3DCB /* AreaCalculator */ = {
+			isa = PBXGroup;
+			children = (
+				02558002266C5566006C3DCB /* AreaCalculatorApp.swift */,
+				02558004266C5566006C3DCB /* ContentView.swift */,
+				02558006266C5567006C3DCB /* Assets.xcassets */,
+				0255800B266C5567006C3DCB /* Info.plist */,
+				02558008266C5567006C3DCB /* Preview Content */,
+			);
+			path = AreaCalculator;
+			sourceTree = "<group>";
+		};
+		02558008266C5567006C3DCB /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				02558009266C5567006C3DCB /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		02558013266C5567006C3DCB /* AreaCalculatorTests */ = {
+			isa = PBXGroup;
+			children = (
+				02558014266C5567006C3DCB /* AreaCalculatorTests.swift */,
+				02558016266C5567006C3DCB /* Info.plist */,
+			);
+			path = AreaCalculatorTests;
+			sourceTree = "<group>";
+		};
+		0255801E266C5567006C3DCB /* AreaCalculatorUITests */ = {
+			isa = PBXGroup;
+			children = (
+				0255801F266C5567006C3DCB /* AreaCalculatorUITests.swift */,
+				02558021266C5567006C3DCB /* Info.plist */,
+			);
+			path = AreaCalculatorUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		02557FFE266C5566006C3DCB /* AreaCalculator */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 02558024266C5567006C3DCB /* Build configuration list for PBXNativeTarget "AreaCalculator" */;
+			buildPhases = (
+				02557FFB266C5566006C3DCB /* Sources */,
+				02557FFC266C5566006C3DCB /* Frameworks */,
+				02557FFD266C5566006C3DCB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = AreaCalculator;
+			productName = AreaCalculator;
+			productReference = 02557FFF266C5566006C3DCB /* AreaCalculator.app */;
+			productType = "com.apple.product-type.application";
+		};
+		0255800F266C5567006C3DCB /* AreaCalculatorTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 02558027266C5567006C3DCB /* Build configuration list for PBXNativeTarget "AreaCalculatorTests" */;
+			buildPhases = (
+				0255800C266C5567006C3DCB /* Sources */,
+				0255800D266C5567006C3DCB /* Frameworks */,
+				0255800E266C5567006C3DCB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				02558012266C5567006C3DCB /* PBXTargetDependency */,
+			);
+			name = AreaCalculatorTests;
+			productName = AreaCalculatorTests;
+			productReference = 02558010266C5567006C3DCB /* AreaCalculatorTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		0255801A266C5567006C3DCB /* AreaCalculatorUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0255802A266C5567006C3DCB /* Build configuration list for PBXNativeTarget "AreaCalculatorUITests" */;
+			buildPhases = (
+				02558017266C5567006C3DCB /* Sources */,
+				02558018266C5567006C3DCB /* Frameworks */,
+				02558019266C5567006C3DCB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				0255801D266C5567006C3DCB /* PBXTargetDependency */,
+			);
+			name = AreaCalculatorUITests;
+			productName = AreaCalculatorUITests;
+			productReference = 0255801B266C5567006C3DCB /* AreaCalculatorUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		02557FF7266C5566006C3DCB /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1250;
+				LastUpgradeCheck = 1250;
+				TargetAttributes = {
+					02557FFE266C5566006C3DCB = {
+						CreatedOnToolsVersion = 12.5;
+					};
+					0255800F266C5567006C3DCB = {
+						CreatedOnToolsVersion = 12.5;
+						TestTargetID = 02557FFE266C5566006C3DCB;
+					};
+					0255801A266C5567006C3DCB = {
+						CreatedOnToolsVersion = 12.5;
+						TestTargetID = 02557FFE266C5566006C3DCB;
+					};
+				};
+			};
+			buildConfigurationList = 02557FFA266C5566006C3DCB /* Build configuration list for PBXProject "AreaCalculator" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 02557FF6266C5566006C3DCB;
+			productRefGroup = 02558000266C5566006C3DCB /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				02557FFE266C5566006C3DCB /* AreaCalculator */,
+				0255800F266C5567006C3DCB /* AreaCalculatorTests */,
+				0255801A266C5567006C3DCB /* AreaCalculatorUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		02557FFD266C5566006C3DCB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0255800A266C5567006C3DCB /* Preview Assets.xcassets in Resources */,
+				02558007266C5567006C3DCB /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0255800E266C5567006C3DCB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		02558019266C5567006C3DCB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		02557FFB266C5566006C3DCB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				02558005266C5566006C3DCB /* ContentView.swift in Sources */,
+				02558003266C5566006C3DCB /* AreaCalculatorApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0255800C266C5567006C3DCB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				02558015266C5567006C3DCB /* AreaCalculatorTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		02558017266C5567006C3DCB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				02558020266C5567006C3DCB /* AreaCalculatorUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		02558012266C5567006C3DCB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 02557FFE266C5566006C3DCB /* AreaCalculator */;
+			targetProxy = 02558011266C5567006C3DCB /* PBXContainerItemProxy */;
+		};
+		0255801D266C5567006C3DCB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 02557FFE266C5566006C3DCB /* AreaCalculator */;
+			targetProxy = 0255801C266C5567006C3DCB /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		02558022266C5567006C3DCB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		02558023266C5567006C3DCB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		02558025266C5567006C3DCB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"AreaCalculator/Preview Content\"";
+				DEVELOPMENT_TEAM = 2993VF6684;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = AreaCalculator/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.test.AreaCalculator;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		02558026266C5567006C3DCB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"AreaCalculator/Preview Content\"";
+				DEVELOPMENT_TEAM = 2993VF6684;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = AreaCalculator/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.test.AreaCalculator;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		02558028266C5567006C3DCB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 2993VF6684;
+				INFOPLIST_FILE = AreaCalculatorTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.test.AreaCalculatorTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/AreaCalculator.app/AreaCalculator";
+			};
+			name = Debug;
+		};
+		02558029266C5567006C3DCB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 2993VF6684;
+				INFOPLIST_FILE = AreaCalculatorTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.test.AreaCalculatorTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/AreaCalculator.app/AreaCalculator";
+			};
+			name = Release;
+		};
+		0255802B266C5567006C3DCB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 2993VF6684;
+				INFOPLIST_FILE = AreaCalculatorUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.test.AreaCalculatorUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = AreaCalculator;
+			};
+			name = Debug;
+		};
+		0255802C266C5567006C3DCB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 2993VF6684;
+				INFOPLIST_FILE = AreaCalculatorUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.test.AreaCalculatorUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = AreaCalculator;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		02557FFA266C5566006C3DCB /* Build configuration list for PBXProject "AreaCalculator" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				02558022266C5567006C3DCB /* Debug */,
+				02558023266C5567006C3DCB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		02558024266C5567006C3DCB /* Build configuration list for PBXNativeTarget "AreaCalculator" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				02558025266C5567006C3DCB /* Debug */,
+				02558026266C5567006C3DCB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		02558027266C5567006C3DCB /* Build configuration list for PBXNativeTarget "AreaCalculatorTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				02558028266C5567006C3DCB /* Debug */,
+				02558029266C5567006C3DCB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0255802A266C5567006C3DCB /* Build configuration list for PBXNativeTarget "AreaCalculatorUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0255802B266C5567006C3DCB /* Debug */,
+				0255802C266C5567006C3DCB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 02557FF7266C5566006C3DCB /* Project object */;
+}

@@ -9,14 +9,16 @@ import SwiftUI
 
 struct InputView {
     let label: String
-//    let input: inputHandler
+    @StateObject var input: inputHandler
 }
 
 extension InputView: View {
     var body: some View {
     
         VStack {
-            Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+            TextField(label, text: $input.input)
+            Text(input.state.warning)
+                .foregroundColor(input.state.color)
         }
     }
 }
@@ -24,6 +26,6 @@ extension InputView: View {
 struct InputView_Previews: PreviewProvider {
     static var previews: some View {
 
-        InputView(label: "Length")
+        InputView(label: "Length", input: inputHandler())
     }
 }

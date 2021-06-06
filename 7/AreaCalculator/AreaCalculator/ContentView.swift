@@ -29,12 +29,8 @@ extension ContentView: View {
             .pickerStyle(SegmentedPickerStyle())
             .padding()
             
-            TextField("Length", text: $length.input)
-            Text(length.state.warning)
-                .foregroundColor(length.state.color)
-            TextField("Width", text: $width.input)
-            Text(width.state.warning)
-                .foregroundColor(width.state.color)
+            InputView(label: "Length", input: length)
+            InputView(label: "Width", input: width)
             
             let area = Area(value: width.value * length.value, unit: unit)
             VStack {

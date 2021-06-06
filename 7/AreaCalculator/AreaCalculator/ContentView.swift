@@ -7,10 +7,27 @@
 
 import SwiftUI
 
-struct ContentView: View {
+struct ContentView {
+    @StateObject var length = inputHandler()
+    @StateObject var width = inputHandler()
+    
+    
+}
+
+extension ContentView: View {
     var body: some View {
-        Text("Hello, world!")
-            .padding()
+        
+        
+        VStack {
+            TextField("Length", text: $length.input)
+            Text(length.state.warning)
+                .foregroundColor(length.state.color)
+            TextField("Width", text: $width.input)
+            Text(width.state.warning)
+                .foregroundColor(width.state.color)
+            
+        }
+        .padding()
     }
 }
 

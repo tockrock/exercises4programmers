@@ -8,9 +8,9 @@
 import SwiftUI
 
 struct ContentView {
+    @State private var unit: UnitHandler = .meter
     @StateObject var length = inputHandler()
     @StateObject var width = inputHandler()
-    @State private var unit: UnitHandler = .meter
     
     var valid: Bool {
         return length.state.valid && width.state.valid
@@ -27,18 +27,19 @@ extension ContentView: View {
                 Text("Feet").tag(UnitHandler.feet)
             }
             .pickerStyle(SegmentedPickerStyle())
-            .padding()
+            .padding(.bottom)
             
             InputView(label: "Length", input: length)
             InputView(label: "Width", input: width)
             
             let area = Area(value: width.value * length.value, unit: unit)
             VStack {
-                Text("\(area.baseArea.description)")
-                Text("\(area.convertedArea.description)")
+                Text("Area is: \(area.baseArea.description)")
+                Text("Converted to: \(area.convertedArea.description)")
             }
             .foregroundColor(valid ? .primary : .clear)
             
+            Spacer()
         }
         .padding()
     }

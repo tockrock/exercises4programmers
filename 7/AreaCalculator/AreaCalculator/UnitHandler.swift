@@ -56,7 +56,7 @@ enum InputState {
         case .empty, .correct:
             return .clear
         case .nonNumerical, .notPositive:
-            return .accentColor
+            return .red
         }
     }
     

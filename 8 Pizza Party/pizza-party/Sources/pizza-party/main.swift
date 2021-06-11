@@ -1,3 +1,4 @@
+import Foundation
 import ArgumentParser
 
 func ask(_ question: String, fallback: String = "") -> String {
@@ -35,38 +36,27 @@ struct pizzaParty: ParsableCommand {
         return (each, remain)
     }
     
-    func run() throws {
-        let people_count = askInt("How many people?")
-        let pizza_count = askInt("How many pizzas do you have?")
+    func provide(_ request: Int, to people_count: Int) -> (Int, Int) {
         
-        let (each, remain) = divide(pizza: pizza_count, with: people_count)
+        let required_piece = request * people_count
         
-        switch pizza_count {
-        case 1:
-            print("\(people_count) people with \(pizza_count) pizzas")
-        default:
-            print("\(people_count) people with \(pizza_count) pizza")
-        }
+        let pizza_count: Int = Int(ceil(Double(required_piece) / 8))
+        let remain = pizza_count * 8 - required_piece
         
-        switch each {
-        case 0:
-            print("No one gets a piece of pizza :(")
-        case 1:
-            print("Each person gets \(each) piece of pizza")
-        default:
-            print("Each person gets \(each) pieces of pizza")
-        }
-        
-        switch remain {
-        case 0:
-            print("No left overs!")
-        case 1:
-            print("There is \(remain) piece leftover.")
-        default:
-            print("There are \(remain) pieces leftover.")
-        }
+        return (pizza_count, remain)
     }
     
+    func run() throws {
+        let people_count = askInt("How many people?")
+        let request = askInt("How many pizzas does every one wants?")
+        
+        let (required, remain) = provide(request, to: people_count)
+        
+        print("Providing \(people_count) people with \(request) peices of pizzas")
+
+        print("Order \(required) pizzas")
+        print("There are \(remain) leftover peices.")
+    }
 }
 
 pizzaParty.main()

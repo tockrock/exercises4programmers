@@ -33,7 +33,10 @@ func requiredPaint(from area: Double) -> Int {
 
 struct PaintCalculator: ParsableCommand {
     func run() throws {
-        let sqft = askForDouble("How many suare feet of paint do you need?")
+        let length = askForDouble("Enter length")
+        let width = askForDouble("Enter width")
+        
+        let sqft = length * width
         
         let gallons = requiredPaint(from: sqft)
         

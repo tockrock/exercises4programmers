@@ -1,15 +1,18 @@
+import Foundation
 import ArgumentParser
+
+let paintableAreaPerGallon = 350.0
 
 func ask(_ question: String, fallback: String = "") -> String {
     print(question, terminator: ": ")
     return readLine() ?? fallback
 }
 
-func askForInt(_ question: String) -> Int {
+func askForDouble(_ question: String) -> Double {
     while true {
         let input = ask(question)
         
-        guard let input: Int = Int(input) else {
+        guard let input: Double = Double(input) else {
             print("Please enter a number.", terminator: " ")
             continue
         }
@@ -23,11 +26,18 @@ func askForInt(_ question: String) -> Int {
     }
 }
 
+func requiredPaint(from area: Double) -> Int {
+    return Int(ceil(area / paintableAreaPerGallon))
+    
+}
+
 struct PaintCalculator: ParsableCommand {
     func run() throws {
-        let sqft = askForInt("How many suare feet of paint do you need?")
+        let sqft = askForDouble("How many suare feet of paint do you need?")
         
-        print("You need to paint \(sqft) square feet.")
+        let gallons = requiredPaint(from: sqft)
+        
+        print("You will need to purchsae \(gallons) gallons of paint to cover \(sqft) square feet.")
     }
 }
 

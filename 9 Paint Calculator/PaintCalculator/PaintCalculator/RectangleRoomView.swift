@@ -7,9 +7,34 @@
 
 import SwiftUI
 
-struct RectangleRoom: View {
+struct RectangleRoom {
+    @StateObject var length = Input()
+    @StateObject var width = Input()
+    
+    var valid: Bool {
+        length.valid && width.valid
+    }
+}
+
+extension RectangleRoom: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        VStack {
+            InputView(label: "Length", input: length)
+            InputView(label: "Width", input: width)
+            
+            Divider()
+                .padding()
+            
+            HStack {
+                Text("Area:")
+                    .foregroundColor(valid ? .primary : .secondary)
+                Text("\(length.value * width.value)")
+                    .foregroundColor(valid ? .primary : .clear)
+                Spacer()
+            }
+        }
+        .padding()
+        
     }
 }
 

@@ -28,6 +28,10 @@ class Input: ObservableObject {
     
     @Published var state: InputState = .empty
     
+    var valid: Bool {
+        state.valid
+    }
+    
     private func validate() {
         guard input.count > 0 else {
             state = .empty

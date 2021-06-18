@@ -7,14 +7,19 @@
 
 import SwiftUI
 
-struct InputView: View {
+struct InputView {
+    let label: String
+    @StateObject var input: Input
+}
+
+extension InputView: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        TextField(label, text: $input.input)
     }
 }
 
 struct InputView_Previews: PreviewProvider {
     static var previews: some View {
-        InputView()
+        InputView(label: "Length", input: Input())
     }
 }

@@ -8,5 +8,6 @@
 import Foundation
 
 class rectangleRoom: ObservableObject {
-    
+    var input: String = ""
+
 }

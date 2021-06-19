@@ -14,10 +14,10 @@
 		025891E2267D5A9F0067E1B7 /* PaintCalculatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 025891E1267D5A9F0067E1B7 /* PaintCalculatorTests.swift */; };
 		025891ED267D5A9F0067E1B7 /* PaintCalculatorUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 025891EC267D5A9F0067E1B7 /* PaintCalculatorUITests.swift */; };
 		025891FB267D5B2C0067E1B7 /* RectangleRoomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 025891FA267D5B2C0067E1B7 /* RectangleRoomView.swift */; };
-		025891FD267D5B7C0067E1B7 /* RectangleRoom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 025891FC267D5B7C0067E1B7 /* RectangleRoom.swift */; };
 		025891FF267D5CC70067E1B7 /* InputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 025891FE267D5CC70067E1B7 /* InputView.swift */; };
 		02589201267D5CCD0067E1B7 /* Input.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02589200267D5CCD0067E1B7 /* Input.swift */; };
-		02F4E7B6267D6B09007E00E0 /* CircleRoom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02F4E7B5267D6B09007E00E0 /* CircleRoom.swift */; };
+		02F4E7B6267D6B09007E00E0 /* CircleRoomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02F4E7B5267D6B09007E00E0 /* CircleRoomView.swift */; };
+		02F4E7B8267D6C1D007E00E0 /* AreaView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02F4E7B7267D6C1D007E00E0 /* AreaView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,10 +51,10 @@
 		025891EC267D5A9F0067E1B7 /* PaintCalculatorUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaintCalculatorUITests.swift; sourceTree = "<group>"; };
 		025891EE267D5A9F0067E1B7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		025891FA267D5B2C0067E1B7 /* RectangleRoomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RectangleRoomView.swift; sourceTree = "<group>"; };
-		025891FC267D5B7C0067E1B7 /* RectangleRoom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RectangleRoom.swift; sourceTree = "<group>"; };
 		025891FE267D5CC70067E1B7 /* InputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputView.swift; sourceTree = "<group>"; };
 		02589200267D5CCD0067E1B7 /* Input.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Input.swift; sourceTree = "<group>"; };
-		02F4E7B5267D6B09007E00E0 /* CircleRoom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleRoom.swift; sourceTree = "<group>"; };
+		02F4E7B5267D6B09007E00E0 /* CircleRoomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleRoomView.swift; sourceTree = "<group>"; };
+		02F4E7B7267D6C1D007E00E0 /* AreaView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AreaView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,8 +108,8 @@
 				025891CF267D5A9E0067E1B7 /* PaintCalculatorApp.swift */,
 				025891D1267D5A9E0067E1B7 /* ContentView.swift */,
 				025891FA267D5B2C0067E1B7 /* RectangleRoomView.swift */,
-				02F4E7B5267D6B09007E00E0 /* CircleRoom.swift */,
-				025891FC267D5B7C0067E1B7 /* RectangleRoom.swift */,
+				02F4E7B5267D6B09007E00E0 /* CircleRoomView.swift */,
+				02F4E7B7267D6C1D007E00E0 /* AreaView.swift */,
 				025891FE267D5CC70067E1B7 /* InputView.swift */,
 				02589200267D5CCD0067E1B7 /* Input.swift */,
 				025891D3267D5A9F0067E1B7 /* Assets.xcassets */,
@@ -275,10 +275,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				02589201267D5CCD0067E1B7 /* Input.swift in Sources */,
-				025891FD267D5B7C0067E1B7 /* RectangleRoom.swift in Sources */,
-				02F4E7B6267D6B09007E00E0 /* CircleRoom.swift in Sources */,
+				02F4E7B6267D6B09007E00E0 /* CircleRoomView.swift in Sources */,
 				025891FB267D5B2C0067E1B7 /* RectangleRoomView.swift in Sources */,
 				025891FF267D5CC70067E1B7 /* InputView.swift in Sources */,
+				02F4E7B8267D6C1D007E00E0 /* AreaView.swift in Sources */,
 				025891D2267D5A9E0067E1B7 /* ContentView.swift in Sources */,
 				025891D0267D5A9E0067E1B7 /* PaintCalculatorApp.swift in Sources */,
 			);

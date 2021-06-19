@@ -7,16 +7,20 @@
 
 import SwiftUI
 
-struct RectangleRoom {
+struct RectangleRoomView {
     @StateObject var length = Input()
     @StateObject var width = Input()
     
     var valid: Bool {
         length.valid && width.valid
     }
+    
+    var area: Double {
+        length.value * width.value
+    }
 }
 
-extension RectangleRoom: View {
+extension RectangleRoomView: View {
     var body: some View {
         VStack {
             InputView(label: "Length", input: length)
@@ -25,13 +29,7 @@ extension RectangleRoom: View {
             Divider()
                 .padding()
             
-            HStack {
-                Text("Area:")
-                    .foregroundColor(valid ? .primary : .secondary)
-                Text("\(length.value * width.value)")
-                    .foregroundColor(valid ? .primary : .clear)
-                Spacer()
-            }
+            ResultView(valid: valid, area: area)
         }
         .padding()
         
@@ -40,6 +38,6 @@ extension RectangleRoom: View {
 
 struct RectangleRoom_Previews: PreviewProvider {
     static var previews: some View {
-        RectangleRoom()
+        RectangleRoomView()
     }
 }

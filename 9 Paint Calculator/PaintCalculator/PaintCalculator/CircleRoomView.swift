@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct CircleRoom {
+struct CircleRoomView {
     @StateObject var radius = Input()
     var valid: Bool {
         radius.valid
@@ -19,22 +19,23 @@ struct CircleRoom {
     
 }
 
-extension CircleRoom: View {
+extension CircleRoomView: View {
     var body: some View {
         VStack {
             InputView(label: "Radius", input: radius)
             Divider()
                 .padding()
-            AreaView(valid: valid, area: area)
+            ResultView(valid: valid, area: area)
             
         }
+        .padding()
         
     }
 }
 
 struct CircleRoom_Previews: PreviewProvider {
     static var previews: some View {
-        CircleRoom()
+        CircleRoomView()
     }
 }
 

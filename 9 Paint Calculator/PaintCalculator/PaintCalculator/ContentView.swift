@@ -11,7 +11,19 @@ struct ContentView: View {
     var body: some View {
         TabView {
             RectangleRoomView()
+                .tabItem {
+                    Label("Rectangle Room",
+                          systemImage: "rectangle")
+                }
             CircleRoomView()
+                .tabItem {
+                    Label("Circle Room",
+                          systemImage: "circle")
+                }
+            LShapeRoomView()
+                .tabItem {
+                    Label("L-Shaped Room", systemImage: "square.split.bottomrightquarter")
+                }
         }
     }
 }

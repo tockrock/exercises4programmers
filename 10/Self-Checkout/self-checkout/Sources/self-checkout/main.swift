@@ -28,24 +28,57 @@ func askInt(_ question: String) -> Int {
     }
 }
 
+func askDouble(_ question: String) -> Double {
+    while true {
+        let input = ask(question)
+        
+        guard input.count > 0 else {
+            print("Please Enter Something.", terminator: " ")
+            continue
+        }
+        
+        guard let input: Double = Double(input) else {
+            print("Please Enter a Number.", terminator: " ")
+            continue
+        }
+        
+        guard input > 0 else {
+            print("Please enter a positive number.", terminator: " ")
+            continue
+        }
+        
+        return input
+    }
+}
+
+
 struct item {
     let name: String
-    let price: Int
-    let quantity: Int
+    let price: Double
+    let quantity: Double
     
     init(name: String) {
         self.name = name
-        self.price = askInt("Enter the price of \(name) item")
-        self.quantity = askInt("Enter the quantity of \(name) item")
+        self.price = askDouble("Enter the price of \(name) item")
+        self.quantity = Double(askInt("Enter the quantity of \(name) item"))
     }
     
 }
 
-func result(items: [item]) {
+func calculate(items: [item]) -> (Double, Double, Double) {
     let subtotal = items.reduce(0){
         $0 + $1.price * $1.quantity
     }
-    print(subtotal)
+    let tax = Double(subtotal) * 0.055
+    let total = Double(subtotal) + tax
+    
+    return (subtotal, tax, total)
+}
+
+func report(subtotal: Double, tax: Double, total: Double) {
+    print("Subtotal: \(subtotal)")
+    print("Tax: \(tax)")
+    print("Total: \(total)")
 }
 
 
@@ -55,7 +88,9 @@ struct SelfCheck: ParsableCommand {
         let second_item = item(name: "second")
         let third_item = item(name: "third")
         
-        result(items: [first_item, second_item, third_item])
+        let (subtotal, tax, total) = calculate(items: [first_item, second_item, third_item])
+        report(subtotal: subtotal, tax: tax, total: total)
+        
         
     }
 }

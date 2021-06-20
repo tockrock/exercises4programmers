@@ -55,14 +55,14 @@ func askPrice(count: Int) -> Double? {
 }
 
 
-struct item {
+struct Item {
     let price: Double
     let quantity: Double
 
 }
 
-func collectItems() -> [item] {
-    var items: [item] = []
+func collectItems() -> [Item] {
+    var items: [Item] = []
     while true {
         let asking_item = items.count + 1
         let price = askPrice(count: asking_item)
@@ -78,12 +78,12 @@ func collectItems() -> [item] {
         
         let quantity = askQuantity(count: asking_item)
         
-        items.append((item(price: price, quantity: Double(quantity))))
+        items.append((Item(price: price, quantity: Double(quantity))))
     }
 }
 
-struct checkout {
-    let items: [item]
+struct Cart {
+    let items: [Item]
     
     var subtotal: Double {
         items.reduce(0){
@@ -98,7 +98,7 @@ struct checkout {
     }
 }
 
-func receipt(cart: checkout) {
+func receipt(cart: Cart) {
     print("Subtotal: \(cart.subtotal)")
     print("Tax: \(cart.tax)")
     print("Total: \(cart.total)")
@@ -107,7 +107,7 @@ func receipt(cart: checkout) {
 struct SelfCheck: ParsableCommand {
     func run() throws {
         let items = collectItems()
-        let cart = checkout(items: items)
+        let cart = Cart(items: items)
         receipt(cart: cart)
         
         

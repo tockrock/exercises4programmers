@@ -5,22 +5,26 @@ func ask(_ question: String, fallback: String = "") -> String {
     return readLine() ?? fallback
 }
 
-func askInt(_ question: String) -> Int {
+func invalidInput() {
+    print("Please enter a positive number.", terminator: " ")
+}
+
+func askQuantity() -> Int {
     while true {
-        let input = ask(question)
+        let input = ask("Enter the quantity of item")
         
         guard input.count > 0 else {
-            print("Please Enter Something.", terminator: " ")
+            invalidInput()
             continue
         }
         
         guard let input: Int = Int(input) else {
-            print("Please Enter a Number.", terminator: " ")
+            invalidInput()
             continue
         }
         
         guard input > 0 else {
-            print("Please enter a positive number.", terminator: " ")
+            invalidInput()
             continue
         }
         
@@ -28,22 +32,21 @@ func askInt(_ question: String) -> Int {
     }
 }
 
-func askDouble(_ question: String) -> Double {
+func askPrice() -> Double? {
     while true {
-        let input = ask(question)
+        let input = ask("Enter the price of item")
         
         guard input.count > 0 else {
-            print("Please Enter Something.", terminator: " ")
-            continue
+            return nil
         }
         
         guard let input: Double = Double(input) else {
-            print("Please Enter a Number.", terminator: " ")
+            invalidInput()
             continue
         }
         
         guard input > 0 else {
-            print("Please enter a positive number.", terminator: " ")
+            invalidInput()
             continue
         }
         
@@ -53,24 +56,29 @@ func askDouble(_ question: String) -> Double {
 
 
 struct item {
-    let name: String
     let price: Double
     let quantity: Double
-    
-    init(name: String) {
-        self.name = name
-        self.price = askDouble("Enter the price of \(name) item")
-        self.quantity = Double(askInt("Enter the quantity of \(name) item"))
-    }
-    
+
 }
 
-func collect(item_names: [String]) -> [item] {
+func collectItems() -> [item] {
     var items: [item] = []
-    for item_name in item_names {
-        items.append(item(name: item_name))
+    while true {
+        let price = askPrice()
+        
+        guard let price = price else {
+            guard items.count > 0 else {
+                print("You need at least one item.", terminator: " ")
+                continue
+            }
+            
+            return items
+        }
+        
+        let quantity = askQuantity()
+        
+        items.append((item(price: price, quantity: Double(quantity))))
     }
-    return items
 }
 
 struct checkout {
@@ -97,7 +105,7 @@ func receipt(cart: checkout) {
 
 struct SelfCheck: ParsableCommand {
     func run() throws {
-        let items = collect(item_names: ["first", "second", "third"])
+        let items = collectItems()
         let cart = checkout(items: items)
         receipt(cart: cart)
         

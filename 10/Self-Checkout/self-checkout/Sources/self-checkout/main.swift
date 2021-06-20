@@ -9,9 +9,9 @@ func invalidInput() {
     print("Please enter a positive number.", terminator: " ")
 }
 
-func askQuantity() -> Int {
+func askQuantity(count: Int) -> Int {
     while true {
-        let input = ask("Enter the quantity of item")
+        let input = ask("Enter the quantity of item(\(count))")
         
         guard input.count > 0 else {
             invalidInput()
@@ -32,9 +32,9 @@ func askQuantity() -> Int {
     }
 }
 
-func askPrice() -> Double? {
+func askPrice(count: Int) -> Double? {
     while true {
-        let input = ask("Enter the price of item")
+        let input = ask("Enter the price of item(\(count))")
         
         guard input.count > 0 else {
             return nil
@@ -64,10 +64,11 @@ struct item {
 func collectItems() -> [item] {
     var items: [item] = []
     while true {
-        let price = askPrice()
+        let asking_item = items.count + 1
+        let price = askPrice(count: asking_item)
         
         guard let price = price else {
-            guard items.count > 0 else {
+            guard asking_item > 1 else {
                 print("You need at least one item.", terminator: " ")
                 continue
             }
@@ -75,7 +76,7 @@ func collectItems() -> [item] {
             return items
         }
         
-        let quantity = askQuantity()
+        let quantity = askQuantity(count: asking_item)
         
         items.append((item(price: price, quantity: Double(quantity))))
     }

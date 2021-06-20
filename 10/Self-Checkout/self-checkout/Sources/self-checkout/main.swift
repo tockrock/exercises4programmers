@@ -65,31 +65,41 @@ struct item {
     
 }
 
-func calculate(items: [item]) -> (Double, Double, Double) {
-    let subtotal = items.reduce(0){
-        $0 + $1.price * $1.quantity
+func collect(item_names: [String]) -> [item] {
+    var items: [item] = []
+    for item_name in item_names {
+        items.append(item(name: item_name))
     }
-    let tax = Double(subtotal) * 0.055
-    let total = Double(subtotal) + tax
+    return items
+}
+
+struct checkout {
+    let items: [item]
     
-    return (subtotal, tax, total)
+    var subtotal: Double {
+        items.reduce(0){
+            $0 + $1.price * $1.quantity
+        }
+    }
+    var tax: Double {
+        Double(subtotal) * 0.055
+    }
+    var total: Double {
+        Double(subtotal) + tax
+    }
 }
 
-func report(subtotal: Double, tax: Double, total: Double) {
-    print("Subtotal: \(subtotal)")
-    print("Tax: \(tax)")
-    print("Total: \(total)")
+func receipt(cart: checkout) {
+    print("Subtotal: \(cart.subtotal)")
+    print("Tax: \(cart.tax)")
+    print("Total: \(cart.total)")
 }
-
 
 struct SelfCheck: ParsableCommand {
     func run() throws {
-        let first_item = item(name: "first")
-        let second_item = item(name: "second")
-        let third_item = item(name: "third")
-        
-        let (subtotal, tax, total) = calculate(items: [first_item, second_item, third_item])
-        report(subtotal: subtotal, tax: tax, total: total)
+        let items = collect(item_names: ["first", "second", "third"])
+        let cart = checkout(items: items)
+        receipt(cart: cart)
         
         
     }

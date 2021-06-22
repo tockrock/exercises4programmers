@@ -5,8 +5,8 @@ func ask(_ question: String, fallback: String = "") -> String {
     return readLine() ?? fallback
 }
 
-func invalidInput() {
-    print("Please enter a positive number:", terminator: " ")
+func invalidPositiveDouble() {
+    print("Not a positive number.", terminator: " ")
 }
 
 func askForDouble(_ question: String) -> Double {
@@ -14,17 +14,17 @@ func askForDouble(_ question: String) -> Double {
         let input = ask(question)
         
         guard input.count > 0 else {
-            invalidInput()
+            invalidPositiveDouble()
             continue
         }
         
         guard let input: Double = Double(input) else {
-            invalidInput()
+            invalidPositiveDouble()
             continue
         }
         
         guard input > 0 else {
-            invalidInput()
+            invalidPositiveDouble()
             continue
         }
         

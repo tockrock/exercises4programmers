@@ -35,9 +35,12 @@ func askForDouble(_ question: String) -> Double {
 struct CurrencyConversion: ParsableCommand {
     func run() throws {
         let amountFrom = askForDouble("How many euros are you exchanging?")
+        let rate = askForDouble("What is the exchange rate?")
+        
+        let amountTo = amountFrom * rate / 100
         
         
-        print("\(amountFrom) euros at an exchange rate of is U.S. dollars.")
+        print("\(amountFrom) euros at an exchange rate of \(rate) is \(amountTo) U.S. dollars.")
     }
 }
 

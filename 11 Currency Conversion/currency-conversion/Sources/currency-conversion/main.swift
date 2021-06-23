@@ -1,3 +1,4 @@
+import Foundation
 import ArgumentParser
 
 func ask(_ question: String, fallback: String = "") -> String {
@@ -11,7 +12,7 @@ func invalidPositiveDouble() {
 
 let exchangeRates = [
     "usd": 1.0,
-    "euro": 0.83742,
+    "eur": 0.83742,
     "jpy": 110.66,
 ]
 
@@ -56,6 +57,22 @@ func askForCurrency(_ question: String, currencies: [String]) -> String {
         
     }
 }
+struct Amount {
+    var value: Double
+    var currency: String
+}
+
+extension Amount: CustomStringConvertible {
+    var description: String {
+        let formatter = NumberFormatter()
+        formatter.numberStyle = .currency
+        formatter.currencyCode = currency
+//        formatter.maximumFractionDigits = 2
+        
+        let number = NSNumber(value: value)
+        return formatter.string(from: number)!
+    }
+}
 
 struct CurrencyConversion: ParsableCommand {
     func run() throws {
@@ -72,10 +89,11 @@ struct CurrencyConversion: ParsableCommand {
         
         let amountTo = amountFrom * rate
         
-        let amountTo = amountFrom * rate / 100
+        let fromAmount = Amount(value: amountFrom, currency: currencyFrom)
+        let toAmount = Amount(value: amountTo, currency: currencyTo)
         
         
-        print("\(amountFrom) euros at an exchange rate of \(rate) is \(amountTo) U.S. dollars.")
+        print("\(fromAmount) at an exchange rate of \(rate) is \(toAmount)")
     }
 }
 

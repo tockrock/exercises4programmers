@@ -59,10 +59,18 @@ func askForCurrency(_ question: String, currencies: [String]) -> String {
 
 struct CurrencyConversion: ParsableCommand {
     func run() throws {
-        let currency = askForCurrency("This is the question", currencies: listOfCurrencies)
-        print(currency)
-        let amountFrom = askForDouble("How many euros are you exchanging?")
-        let rate = askForDouble("What is the exchange rate?")
+        let currencyFrom = askForCurrency("Select the currency you want to exchange from", currencies: listOfCurrencies)
+        let amountFrom = askForDouble("How many \(currencyFrom) are you exchanging?")
+        
+        let remainingCurrencies = listOfCurrencies.filter{ $0 != currencyFrom }
+        let currencyTo = askForCurrency("Select the currency you want to exchange to", currencies: remainingCurrencies)
+        
+        let rateFrom = exchangeRates[currencyFrom]!
+        let rateTo = exchangeRates[currencyTo]!
+        
+        let rate =  rateTo / rateFrom
+        
+        let amountTo = amountFrom * rate
         
         let amountTo = amountFrom * rate / 100
         

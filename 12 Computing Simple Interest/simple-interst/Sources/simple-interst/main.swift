@@ -30,14 +30,8 @@ func askForDouble(_ question: String) -> Double {
     }
 }
 
-func calculateSimpleInterest(pricipal: Double, rate: Double, years: Int) -> Double {
-    
-    var amount = pricipal
-    for _ in 1...years {
-        amount = amount * ( 1 + rate / 100 )
-    }
-    
-    return amount
+func calculateSimpleInterest(principal: Double, rate: Double, year: Int) -> Double {
+    return principal * ( 1 + rate * Double(year))
 }
 
 let currencyFormatter = NumberFormatter()
@@ -51,19 +45,21 @@ rateFormatter.numberStyle = .percent
 struct SimpleInterest: ParsableCommand {
     func run() throws {
         let principal = askForDouble("Enter the principal")
-        let bareRate = askForDouble("Enter the rate of interest")
+        let percentRate = askForDouble("Enter the rate of interest")
+        let bareRate = percentRate / 100
+
         let years = askForDouble("Enter the number of years")
         let roundedYears = Int(ceil(years))
+        
+        let formattedRate = rateFormatter.string(from: NSNumber(value: bareRate))!
 
-        let bareAmount = calculateSimpleInterest(pricipal: principal, rate: bareRate, years: roundedYears)
-        let amount = NSNumber(value: bareAmount)
-        
-        let rate = NSNumber(value: bareRate)
-        
-        let formattedAmount = currencyFormatter.string(from: amount)!
-        let formattedRate = rateFormatter.string(from: rate)!
-        
-        print("After \(roundedYears) at \(formattedRate), the investment will be worth \(formattedAmount)")
+        for year in 1...roundedYears {
+            let bareAmount = calculateSimpleInterest(principal: principal, rate: bareRate, year: year)
+            let amount = NSNumber(value: bareAmount)
+            let formattedAmount = currencyFormatter.string(from: amount)!
+            
+            print("After \(year) years at \(formattedRate), the investment will be worth \(formattedAmount)")
+        }
     }
 }
 

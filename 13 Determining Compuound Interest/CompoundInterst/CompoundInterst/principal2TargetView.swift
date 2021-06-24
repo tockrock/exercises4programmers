@@ -12,17 +12,6 @@ struct principal2TargetView {
     
     private var experimental = 0.0
     
-    static var nf: NumberFormatter {
-        let nf = NumberFormatter()
-        nf.numberStyle = .decimal
-        return nf
-    }
-    
-    static var cf: NumberFormatter {
-        let cf = NumberFormatter()
-        cf.numberStyle = .currency
-        return cf
-    }
 }
 
 extension principal2TargetView: View {
@@ -32,9 +21,9 @@ extension principal2TargetView: View {
             TextField(
                 "Double",
                 value: $principal,
-                formatter: principal2TargetView.cf
+                formatter: cf
             )
-            Text(String(principal))
+            Text(cf.string(from: NSNumber(value: principal * 2))!)
             
             Spacer()
         }

@@ -8,15 +8,9 @@
 import SwiftUI
 
 struct principal2TargetView {
-    @State private var date = Date()
-    @State private var double = Double()
-    @State private var integer = Int()
+    @State private var principal = Double()
     
-    static var df: DateFormatter {
-        let df = DateFormatter()
-        df.dateStyle = .short
-        return df
-    }
+    private var experimental = 0.0
     
     static var nf: NumberFormatter {
         let nf = NumberFormatter()
@@ -33,18 +27,16 @@ struct principal2TargetView {
 
 extension principal2TargetView: View {
     var body: some View {
-        VStack {
-            TextField(
-                "Date",
-                value: $date,
-                formatter: principal2TargetView.df)
-            Text(date.debugDescription)
+        VStack(alignment: .leading) {
+            Text("Principal Amount")
             TextField(
                 "Double",
-                value: $double,
+                value: $principal,
                 formatter: principal2TargetView.cf
             )
-            Text("\(double)")
+            Text(String(principal))
+            
+            Spacer()
         }
     }
 }

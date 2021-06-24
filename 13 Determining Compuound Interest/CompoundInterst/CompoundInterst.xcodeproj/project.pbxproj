@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		02387B9D2684656E000221C6 /* Formatters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02387B9C2684656E000221C6 /* Formatters.swift */; };
 		0278DF242685435B0024DEAB /* FormField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0278DF232685435B0024DEAB /* FormField.swift */; };
+		0278DF28268547DF0024DEAB /* Input.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0278DF27268547DF0024DEAB /* Input.swift */; };
 		0295A3862684583F0059491C /* CompoundInterstApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0295A3852684583F0059491C /* CompoundInterstApp.swift */; };
 		0295A3882684583F0059491C /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0295A3872684583F0059491C /* ContentView.swift */; };
 		0295A38A268458400059491C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0295A389268458400059491C /* Assets.xcassets */; };
@@ -19,6 +20,7 @@
 /* Begin PBXFileReference section */
 		02387B9C2684656E000221C6 /* Formatters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Formatters.swift; sourceTree = "<group>"; };
 		0278DF232685435B0024DEAB /* FormField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormField.swift; sourceTree = "<group>"; };
+		0278DF27268547DF0024DEAB /* Input.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Input.swift; sourceTree = "<group>"; };
 		0295A3822684583F0059491C /* CompoundInterst.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CompoundInterst.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0295A3852684583F0059491C /* CompoundInterstApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompoundInterstApp.swift; sourceTree = "<group>"; };
 		0295A3872684583F0059491C /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -63,6 +65,7 @@
 				0295A394268458610059491C /* principal2TargetView.swift */,
 				0278DF232685435B0024DEAB /* FormField.swift */,
 				02387B9C2684656E000221C6 /* Formatters.swift */,
+				0278DF27268547DF0024DEAB /* Input.swift */,
 				0295A389268458400059491C /* Assets.xcassets */,
 				0295A38E268458400059491C /* Info.plist */,
 				0295A38B268458400059491C /* Preview Content */,
@@ -147,6 +150,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0278DF28268547DF0024DEAB /* Input.swift in Sources */,
 				0278DF242685435B0024DEAB /* FormField.swift in Sources */,
 				0295A3882684583F0059491C /* ContentView.swift in Sources */,
 				0295A395268458610059491C /* principal2TargetView.swift in Sources */,

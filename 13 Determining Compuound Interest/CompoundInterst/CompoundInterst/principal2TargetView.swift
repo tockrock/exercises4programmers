@@ -29,10 +29,14 @@ extension principal2TargetView: View {
                 value: $principal,
                 formatter: cf
             )
+            .textFieldStyle(RoundedBorderTextFieldStyle())
+            .multilineTextAlignment(.trailing)
+            
             Text(result)
             
             Spacer()
         }
+        .padding()
     }
 }
 

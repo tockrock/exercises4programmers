@@ -8,6 +8,7 @@ struct reverseInterest: ParsableCommand {
         let years = askForRoundedInt("What is the number of years?")
         let compoundPerYear = askForRoundedInt("What is the number of times the interest is compounded per year?")
         
+        print("You need to invest \\(principal) to get \(output(target, as: .currency))for \(years) years when compounding \(compoundPerYear) times per year at \(output(rate, as: .percent)) ")
         
     }
 }

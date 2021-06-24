@@ -23,8 +23,13 @@ struct principal2TargetView {
         nf.numberStyle = .decimal
         return nf
     }
+    
+    static var cf: NumberFormatter {
+        let cf = NumberFormatter()
+        cf.numberStyle = .currency
+        return cf
+    }
 }
-
 
 extension principal2TargetView: View {
     var body: some View {
@@ -37,15 +42,9 @@ extension principal2TargetView: View {
             TextField(
                 "Double",
                 value: $double,
-                formatter: principal2TargetView.nf
+                formatter: principal2TargetView.cf
             )
-            TextField(
-                "Int",
-                value: $integer,
-                formatter: principal2TargetView.nf
-            )
-            Text(double.debugDescription)
-            Text(String(integer))
+            Text("\(double)")
         }
     }
 }

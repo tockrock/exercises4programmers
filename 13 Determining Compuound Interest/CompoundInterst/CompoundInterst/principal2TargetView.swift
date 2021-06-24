@@ -10,7 +10,13 @@ import SwiftUI
 struct principal2TargetView {
     @State private var principal = Double()
     
-    private var experimental = 0.0
+    private var amount: Double {
+        principal * 2
+    }
+    
+    private var result: String {
+        cf.string(from: NSNumber(value: amount))!
+    }
     
 }
 
@@ -23,7 +29,7 @@ extension principal2TargetView: View {
                 value: $principal,
                 formatter: cf
             )
-            Text(cf.string(from: NSNumber(value: principal * 2))!)
+            Text(result)
             
             Spacer()
         }

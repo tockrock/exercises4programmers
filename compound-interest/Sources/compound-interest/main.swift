@@ -1,3 +1,4 @@
+import Foundation
 import ArgumentParser
 
 func notPositive() {
@@ -28,10 +29,18 @@ func askForDouble(_ question: String) -> Double {
     }
 }
 
+func askForRoundedInt(_ question: String) -> Int {
+    return Int(ceil(askForDouble(question)))
+}
+
 struct compoundInterest: ParsableCommand {
     func run() throws {
         let principal = askForDouble("What is the principal amount?")
-        print("The principal amount is \(principal)")
+        let bareRate = askForDouble("What is the rate?") / 100
+        let years = askForRoundedInt("What is the number of years?")
+        let compoundPerYear = askForRoundedInt("What is the number of times the interest is compounded per year?")
+        
+        print("\(principal) invested at \(bareRate) for \(years) compounded \(compoundPerYear) times per year is \\(amount)")
     }
 }
 

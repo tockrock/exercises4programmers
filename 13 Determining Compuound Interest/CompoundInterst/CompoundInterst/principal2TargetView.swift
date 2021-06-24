@@ -7,9 +7,46 @@
 
 import SwiftUI
 
-struct principal2TargetView: View {
+struct principal2TargetView {
+    @State private var date = Date()
+    @State private var double = Double()
+    @State private var integer = Int()
+    
+    static var df: DateFormatter {
+        let df = DateFormatter()
+        df.dateStyle = .short
+        return df
+    }
+    
+    static var nf: NumberFormatter {
+        let nf = NumberFormatter()
+        nf.numberStyle = .decimal
+        return nf
+    }
+}
+
+
+extension principal2TargetView: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        VStack {
+            TextField(
+                "Date",
+                value: $date,
+                formatter: principal2TargetView.df)
+            Text(date.debugDescription)
+            TextField(
+                "Double",
+                value: $double,
+                formatter: principal2TargetView.nf
+            )
+            TextField(
+                "Int",
+                value: $integer,
+                formatter: principal2TargetView.nf
+            )
+            Text(double.debugDescription)
+            Text(String(integer))
+        }
     }
 }
 

@@ -9,6 +9,9 @@ import SwiftUI
 
 struct principal2TargetView {
     @State private var principal = Double()
+    @State private var rate = Double()
+    @State private var years = Double()
+    @State private var compounds = Double()
     
     private var amount: Double {
         principal * 2
@@ -32,9 +35,37 @@ extension principal2TargetView: View {
             .textFieldStyle(RoundedBorderTextFieldStyle())
             .multilineTextAlignment(.trailing)
             
+            Text("Annual Rate")
+            TextField(
+                "Rate",
+                value: $rate,
+                formatter: nf
+            )
+            .textFieldStyle(RoundedBorderTextFieldStyle())
+            .multilineTextAlignment(.trailing)
+            
+            Text("Years to Invest")
+            TextField(
+                "Years",
+                value: $years,
+                formatter: nf
+            )
+            .textFieldStyle(RoundedBorderTextFieldStyle())
+            .multilineTextAlignment(.trailing)
+            
+            Text("Compounds per year")
+            TextField(
+                "Compounds",
+                value: $compounds,
+                formatter: nf
+            )
+            .textFieldStyle(RoundedBorderTextFieldStyle())
+            .multilineTextAlignment(.trailing)
+            
+            Divider()
+            
             Text(result)
             
-            Spacer()
         }
         .padding()
     }

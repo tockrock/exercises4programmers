@@ -1,5 +1,13 @@
+import Foundation
 import ArgumentParser
 
+func calculateInterest(target: Double, rate: Double, years: Int, compoundPerYear: Int) -> Double {
+    let doubleYears = Double(years)
+    let doubleCompound = Double(compoundPerYear)
+    
+    let principal = target / pow((1 + rate / doubleCompound), (doubleCompound * doubleYears))
+    return principal
+}
 
 struct reverseInterest: ParsableCommand {
     func run() throws {
@@ -8,7 +16,9 @@ struct reverseInterest: ParsableCommand {
         let years = askForRoundedInt("What is the number of years?")
         let compoundPerYear = askForRoundedInt("What is the number of times the interest is compounded per year?")
         
-        print("You need to invest \\(principal) to get \(output(target, as: .currency))for \(years) years when compounding \(compoundPerYear) times per year at \(output(rate, as: .percent)) ")
+        let principal = calculateInterest(target: target, rate: rate, years: years, compoundPerYear: compoundPerYear)
+        
+        print("You need to invest \(output(principal, as: .currency)) for \(years) years to get \(output(target, as: .currency)) when compounding \(compoundPerYear) times per year at \(output(rate, as: .percent)) ")
         
     }
 }

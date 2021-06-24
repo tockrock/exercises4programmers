@@ -29,6 +29,9 @@ func askForDouble(_ question: String) -> Double {
     }
 }
 
+func askForRoundedInt(_ question: String) -> Int {
+    return Int(ceil(askForDouble(question)))
+}
 
 func calculateCompoundInterest(principal: Double, rate: Double, years: Int, compoundPerYear: Int) -> Double {
     let doubleYears = Double(years)

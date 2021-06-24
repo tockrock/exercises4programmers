@@ -5,6 +5,7 @@
 //  Created by 鈴木剛 on 2021/06/24.
 //
 
+import Foundation
 import SwiftUI
 
 struct principal2TargetView {
@@ -14,7 +15,7 @@ struct principal2TargetView {
     @State private var compounds = Double()
     
     private var amount: Double {
-        principal * 2
+        principal * pow((1 + rate / compounds), compounds * years)
     }
     
     private var result: String {

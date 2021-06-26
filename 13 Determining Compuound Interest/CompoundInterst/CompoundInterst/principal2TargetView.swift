@@ -9,13 +9,13 @@ import Foundation
 import SwiftUI
 
 struct principal2TargetView {
-    @State private var principal = Double()
-    @State private var rate = Double()
-    @State private var years = Double()
-    @State private var compounds = Double()
+    @StateObject private var principal = StringInput(decimals: 2)
+    @StateObject private var rate = StringInput(decimals: 1)
+    @StateObject private var years = StringInput(decimals: 0)
+    @StateObject private var compounds = StringInput(decimals: 0)
     
     private var amount: Double {
-        principal * pow((1 + rate / compounds), compounds * years)
+        principal.value * pow((1 + (rate.value / 100) / compounds.value), compounds.value * years.value)
     }
     
     private var result: String {
@@ -26,46 +26,20 @@ struct principal2TargetView {
 
 extension principal2TargetView: View {
     var body: some View {
-        VStack(alignment: .leading) {
-            Text("Principal Amount")
-            TextField(
-                "Double",
-                value: $principal,
-                formatter: cf
-            )
-            .textFieldStyle(RoundedBorderTextFieldStyle())
-            .multilineTextAlignment(.trailing)
+        VStack(alignment: .trailing) {
+            FormField(label: "Principal Amount", input: principal)
             
-            Text("Annual Rate")
-            TextField(
-                "Rate",
-                value: $rate,
-                formatter: nf
-            )
-            .textFieldStyle(RoundedBorderTextFieldStyle())
-            .multilineTextAlignment(.trailing)
+            FormField(label: "Annual Rate", input: rate)
             
-            Text("Years to Invest")
-            TextField(
-                "Years",
-                value: $years,
-                formatter: nf
-            )
-            .textFieldStyle(RoundedBorderTextFieldStyle())
-            .multilineTextAlignment(.trailing)
-            
-            Text("Compounds per year")
-            TextField(
-                "Compounds",
-                value: $compounds,
-                formatter: nf
-            )
-            .textFieldStyle(RoundedBorderTextFieldStyle())
-            .multilineTextAlignment(.trailing)
+            FormField(label: "Years to Invest", input: years)
+            FormField(label: "Compounds per year", input: compounds)
             
             Divider()
+                .padding(.vertical)
             
             Text(result)
+            
+            Spacer()
             
         }
         .padding()

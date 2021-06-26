@@ -9,18 +9,25 @@ import SwiftUI
 
 struct FormField {
     let label: String
-    @State var value
+    @StateObject var input: StringInput
     
 }
 
 extension FormField: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        VStack(alignment: .leading) {
+            Text(label)
+            TextField(label, text: $input.input)
+                .textFieldStyle(RoundedBorderTextFieldStyle())
+                .multilineTextAlignment(.trailing)
+        }
+        
     }
 }
 
 struct FormField_Previews: PreviewProvider {
     static var previews: some View {
-        FormField()
+        FormField(label: "Label", input: StringInput(decimals: 2))
+            .padding()
     }
 }

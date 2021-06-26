@@ -17,7 +17,7 @@ enum State {
     case alert
     case good
     
-    var verified: Bool {
+    var valid: Bool {
         switch self {
         case .good, .warning:
             return true
@@ -39,6 +39,10 @@ class StringInput: ObservableObject {
     
     init(decimals: Int) {
         self.decimals = decimals
+    }
+    
+    var valid: Bool {
+        state.valid
     }
     
     func verify() {

@@ -19,7 +19,15 @@ struct principal2TargetView {
     }
     
     private var result: String {
-        cf.string(from: NSNumber(value: amount))!
+        if valid {
+            return cf.string(from: NSNumber(value: amount))!
+        }
+        
+        return cf.string(from: NSNumber(value: 0))!
+    }
+    
+    private var valid: Bool {
+        principal.valid && rate.valid && years.valid && compounds.valid
     }
     
 }

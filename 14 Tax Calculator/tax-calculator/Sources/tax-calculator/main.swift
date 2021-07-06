@@ -1,3 +1,4 @@
+import Foundation
 import ArgumentParser
 
 func notPositiveNumber() {
@@ -37,16 +38,30 @@ struct taxCalculator: ParsableCommand {
         
         let state = ask("What is the state").lowercased()
         
-        if state == "wi" {
+        if state == "WI".lowercased() || state == "Wisconsin".lowercased() {
             
-            tax = subtotal * 0.055
-            print("The Subtotal is \(subtotal)")
-            print("The tax is \(tax)")
+            tax = (subtotal * 0.055).nearestCent()
+            print("The subtotal is \(subtotal.formatUSD())")
+            print("The tax is \(tax.formatUSD())")
         }
         
         let total = subtotal + tax
         
-        print("The total is \(total)")
+        print("The total is \(total.formatUSD())")
+    }
+}
+
+extension Double {
+    func nearestCent() -> Double {
+        return (self * 100).rounded() / 100
+    }
+    
+    func formatUSD() -> String {
+        let currencyFormatter = NumberFormatter()
+        currencyFormatter.numberStyle = .currency
+        currencyFormatter.currencyCode = "USD"
+        
+        return currencyFormatter.string(from: NSNumber(value: self))!
     }
 }
 

@@ -45,7 +45,8 @@ extension principal2TargetView: View {
             Divider()
                 .padding(.vertical)
             
-            Text(result)
+            Text("\(result)")
+                .foregroundColor(valid ? .primary : .secondary)
             
             Spacer()
             

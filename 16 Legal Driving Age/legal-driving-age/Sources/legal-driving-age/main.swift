@@ -27,7 +27,12 @@ struct legalDrivingAge: ParsableCommand {
     func run() throws {
         let age = askInt("What is your age?")
         
-        print("Your age is \(age)")
+        guard age >= drivingAge else {
+            print("You are not old enough to legally drive")
+            return
+        }
+        
+        print("Your are old enough to legally drive.")
     }
 }
 

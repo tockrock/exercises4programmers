@@ -7,15 +7,21 @@ func ask(_ question: String, fallback: String = "") -> String {
     return readLine() ?? fallback
 }
 
-func askInt(_ question: String) -> Int {
+func askForValidAge() {
+    print("Please enter valid age.", terminator: " ")
+}
+
+func askAge(_ question: String) -> Int {
     while true {
         let input = ask(question)
         
         guard let input: Int = Int(input) else {
+            askForValidAge()
             continue
         }
         
         guard input > 0 else {
+            askForValidAge()
             continue
         }
         
@@ -25,14 +31,9 @@ func askInt(_ question: String) -> Int {
 
 struct legalDrivingAge: ParsableCommand {
     func run() throws {
-        let age = askInt("What is your age?")
+        let age = askAge("What is your age?")
         
-        guard age >= drivingAge else {
-            print("You are not old enough to legally drive")
-            return
-        }
-        
-        print("Your are old enough to legally drive.")
+        age >= drivingAge ? print("Your are old enough to legally drive.") : print("You are not old enough to legally drive")
     }
 }
 

@@ -23,11 +23,11 @@ extension UnitPickerView: View {
         .pickerStyle(SegmentedPickerStyle())
     }
 }
-//
-//struct UnitPickerView_Previews: PreviewProvider {
-//    @State private var someunit: Unit = Unit.c
-//
-//    static var previews: some View {
-//        UnitPickerView(name: "From Unit", selection: $someunit)
-//    }
-//}
+
+struct UnitPickerView_Previews: PreviewProvider {
+    @State static var someunit = Unit.f
+
+    static var previews: some View {
+        UnitPickerView(name: "From Unit", selection: $someunit)
+    }
+}

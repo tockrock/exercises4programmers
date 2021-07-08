@@ -3,6 +3,15 @@ import ArgumentParser
 enum ConversionMethod {
     case c
     case f
+    
+    func inputName() -> String {
+        switch self {
+        case .c:
+            return "Fahrenheit"
+        case .f:
+            return "Celsius"
+        }
+    }
 }
 
 func ask(_ question: String, fallback: String = "") -> String {
@@ -28,11 +37,25 @@ func askConversionMethod() -> ConversionMethod {
     }
 }
 
+func askTemperature(method: ConversionMethod) -> Double {
+    while true {
+        let input = ask("Please enter the temperature in \(method.inputName())")
+        
+        guard let input: Double = Double(input) else {
+            continue
+        }
+        
+        return input
+    }
+}
+
 struct temperatureConverter: ParsableCommand {
     func run() throws {
-        let conversionMethod = askConversionMethod()
+        let method = askConversionMethod()
         
-        print("You've selected \(conversionMethod)")
+        let original_temp = askTemperature(method: method)
+        
+        print("You want to convert \(original_temp) \(method.inputName()) to the other thing")
     }
 }
 

@@ -3,7 +3,9 @@ import ArgumentParser
 enum ConversionMethod {
     case c
     case f
-    
+}
+
+extension ConversionMethod {
     func inputName() -> String {
         switch self {
         case .c:

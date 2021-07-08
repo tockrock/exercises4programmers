@@ -16,9 +16,9 @@ struct UnitPickerView {
 extension UnitPickerView: View {
     var body: some View {
         Picker(name, selection: $selection) {
-            Text("Fahrenheit").tag(Unit.f)
-            Text("Celsius").tag(Unit.c)
-            Text("Kelvin").tag(Unit.k)
+            ForEach(Unit.allCases) { unit in
+                Text(unit.rawValue).tag(unit)
+            }
         }
         .pickerStyle(SegmentedPickerStyle())
     }

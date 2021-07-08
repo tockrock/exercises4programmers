@@ -9,29 +9,28 @@ import SwiftUI
 
 struct ConversionView {
     @State private var fromUnit: Unit = .c
-    @State private var toUnit: Unit = .k
+    @State private var toUnit: Unit = .f
+    
+    @StateObject var fromTemp: Input
 }
 
 extension ConversionView: View {
     var body: some View {
         VStack {
-            Picker("From Unit", selection: $fromUnit) {
-                Text("Fahrenheit").tag(Unit.f)
-                Text("Celsius").tag(Unit.c)
-                Text("Kelvin").tag(Unit.k)
-            }
-            .pickerStyle(SegmentedPickerStyle())
             
-            UnitPickerView(name: "From Unit", selection: $fromUnit)
-            UnitPickerView(name: "To Unit", selection: $toUnit)
+            UnitPickerView(name: "From", selection: $fromUnit)
+            TextField("Original Temperature", text: $fromTemp.input)
+            Divider()
+            
+            UnitPickerView(name: "To", selection: $toUnit)
+            Text(String(convert(original_temp: fromTemp.value, fromUnit: fromUnit, toUnit: toUnit)))
 
-            Text("You've selected")
         }
     }
 }
 
 struct ConversionView_Previews: PreviewProvider {
     static var previews: some View {
-        ConversionView()
+        ConversionView(fromTemp: Input())
     }
 }

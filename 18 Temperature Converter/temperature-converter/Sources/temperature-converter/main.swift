@@ -12,6 +12,24 @@ enum ConversionMethod {
             return "Celsius"
         }
     }
+    
+    func outputName() -> String {
+        switch self {
+        case .c:
+            return "Celsius"
+        case .f:
+            return "Fahrenheit"
+        }
+    }
+    
+    func convert(from original_temp: Double) -> Double {
+        switch self {
+        case .c:
+            return (original_temp - 32) * 5 / 9
+        case .f:
+            return (original_temp * 9 / 5) - 32
+        }
+    }
 }
 
 func ask(_ question: String, fallback: String = "") -> String {
@@ -55,7 +73,9 @@ struct temperatureConverter: ParsableCommand {
         
         let original_temp = askTemperature(method: method)
         
-        print("You want to convert \(original_temp) \(method.inputName()) to the other thing")
+        let converted_temp = method.convert(from: original_temp)
+        
+        print("The temperature in \(method.outputName()) is \(converted_temp)")
     }
 }
 

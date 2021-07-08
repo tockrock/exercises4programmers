@@ -63,8 +63,8 @@ func convert(original_temp: Double,
              fromUnit: Unit,
              toUnit: Unit) -> Double {
     
-    let celsius: Double
     // convert everything to Celsius first
+    let celsius: Double
     switch fromUnit {
     case .f:
         celsius = (original_temp - 32) * 5 / 9

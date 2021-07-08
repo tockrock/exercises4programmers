@@ -1,37 +1,23 @@
 import ArgumentParser
 
-enum ConversionMethod {
+enum Unit {
     case c
     case f
+    case k
 }
 
-extension ConversionMethod {
-    func inputName() -> String {
-        switch self {
-        case .c:
-            return "Fahrenheit"
-        case .f:
-            return "Celsius"
-        }
-    }
-    
-    func outputName() -> String {
+extension Unit {
+    func name() -> String {
         switch self {
         case .c:
             return "Celsius"
         case .f:
             return "Fahrenheit"
+        case .k:
+            return "Kelvin"
         }
     }
     
-    func convert(from original_temp: Double) -> Double {
-        switch self {
-        case .c:
-            return (original_temp - 32) * 5 / 9
-        case .f:
-            return (original_temp * 9 / 5) - 32
-        }
-    }
 }
 
 func ask(_ question: String, fallback: String = "") -> String {
@@ -39,27 +25,31 @@ func ask(_ question: String, fallback: String = "") -> String {
     return readLine() ?? fallback
 }
 
-func askConversionMethod() -> ConversionMethod {
+func askUnit(_ question: String) -> Unit {
     while true {
-        print("Press C to convert from Fahrenheit to Celsius.",
-              "Press F to convert from Celsius to Fahrenheit.", separator: "\n")
+        print("Press C for Celsius.",
+              "Press F for Fahrenheit.",
+              "Press K for Kelvin",
+              separator: "\n")
         
-        let input = ask("Your choice")
+        let input = ask(question)
         
         switch input.lowercased() {
         case "c":
-            return ConversionMethod.c
+            return .c
         case "f":
-            return ConversionMethod.f
+            return .f
+        case "k":
+            return .k
         default:
             continue
         }
     }
 }
 
-func askTemperature(method: ConversionMethod) -> Double {
+func askTemperature(method: Unit) -> Double {
     while true {
-        let input = ask("Please enter the temperature in \(method.inputName())")
+        let input = ask("Please enter the temperature in \(method.name())")
         
         guard let input: Double = Double(input) else {
             continue
@@ -69,15 +59,43 @@ func askTemperature(method: ConversionMethod) -> Double {
     }
 }
 
+func convert(original_temp: Double,
+             fromUnit: Unit,
+             toUnit: Unit) -> Double {
+    
+    let celsius: Double
+    // convert everything to Celsius first
+    switch fromUnit {
+    case .f:
+        celsius = (original_temp - 32) * 5 / 9
+    case .c:
+        celsius = original_temp
+    case .k:
+        celsius = original_temp - 273.15
+    }
+    
+    switch toUnit {
+    case .f:
+        return (celsius * 9 / 5) + 32
+    case .c:
+        return celsius
+    case .k:
+        return celsius + 273.15
+    }
+    
+    
+}
+
 struct temperatureConverter: ParsableCommand {
     func run() throws {
-        let method = askConversionMethod()
+        let fromUnit = askUnit("Enter the unit you want to convert from")
+        let toUnit = askUnit("Enter the unit you want to convert to")
         
-        let original_temp = askTemperature(method: method)
+        let original_temp = askTemperature(method: fromUnit)
         
-        let converted_temp = method.convert(from: original_temp)
+        let converted_temp = convert(original_temp: original_temp, fromUnit: fromUnit, toUnit: toUnit)
         
-        print("The temperature in \(method.outputName()) is \(converted_temp)")
+        print("The temperature in \(toUnit.name()) is \(converted_temp)")
     }
 }
 

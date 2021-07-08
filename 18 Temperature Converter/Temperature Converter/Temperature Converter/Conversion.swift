@@ -6,3 +6,10 @@
 //
 
 import Foundation
+
+enum Unit {
+    case f
+    case c
+    case k
+}
+

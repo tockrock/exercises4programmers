@@ -13,6 +13,7 @@
 		0232752526968FBE001E8CD8 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0232752426968FBE001E8CD8 /* Preview Assets.xcassets */; };
 		0232752F26969003001E8CD8 /* ConversionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0232752E26969003001E8CD8 /* ConversionView.swift */; };
 		023275312696900F001E8CD8 /* Conversion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 023275302696900F001E8CD8 /* Conversion.swift */; };
+		0232753326969326001E8CD8 /* UnitPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0232753226969326001E8CD8 /* UnitPickerView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		0232752626968FBE001E8CD8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0232752E26969003001E8CD8 /* ConversionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConversionView.swift; sourceTree = "<group>"; };
 		023275302696900F001E8CD8 /* Conversion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Conversion.swift; sourceTree = "<group>"; };
+		0232753226969326001E8CD8 /* UnitPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnitPickerView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +61,7 @@
 				0232751D26968FBC001E8CD8 /* Temperature_ConverterApp.swift */,
 				0232751F26968FBC001E8CD8 /* ContentView.swift */,
 				0232752E26969003001E8CD8 /* ConversionView.swift */,
+				0232753226969326001E8CD8 /* UnitPickerView.swift */,
 				023275302696900F001E8CD8 /* Conversion.swift */,
 				0232752126968FBE001E8CD8 /* Assets.xcassets */,
 				0232752626968FBE001E8CD8 /* Info.plist */,
@@ -146,6 +149,7 @@
 			files = (
 				0232752F26969003001E8CD8 /* ConversionView.swift in Sources */,
 				023275312696900F001E8CD8 /* Conversion.swift in Sources */,
+				0232753326969326001E8CD8 /* UnitPickerView.swift in Sources */,
 				0232752026968FBC001E8CD8 /* ContentView.swift in Sources */,
 				0232751E26968FBC001E8CD8 /* Temperature_ConverterApp.swift in Sources */,
 			);

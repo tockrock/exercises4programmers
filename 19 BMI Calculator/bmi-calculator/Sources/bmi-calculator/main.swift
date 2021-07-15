@@ -29,6 +29,17 @@ struct bmiCalculator: ParsableCommand {
         
         let bmi = weight / pow(height/100, 2)
         print("Your BMI is \(bmi)")
+        
+        switch bmi {
+        case _ where bmi > 25:
+            print("You are overweight. You should see your doctor.")
+        case _ where bmi >= 18.5:
+            print("You are within the ideal weight range")
+        case _ where bmi < 18.5:
+            print("You are underweight. You should see your doctor. ")
+        default:
+            print("Something has gone wrong!")
+        }
     }
 }
 

@@ -11,7 +11,6 @@
 		0266E84D26A0FE85008ACFD3 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0266E84C26A0FE85008ACFD3 /* ContentView.swift */; };
 		0266E84F26A0FE86008ACFD3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0266E84E26A0FE86008ACFD3 /* Assets.xcassets */; };
 		0266E85226A0FE86008ACFD3 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0266E85126A0FE86008ACFD3 /* Preview Assets.xcassets */; };
-		0266E85A26A0FF20008ACFD3 /* Input.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0266E85926A0FF20008ACFD3 /* Input.swift */; };
 		0266E85C26A10366008ACFD3 /* BMICalculatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0266E85B26A10366008ACFD3 /* BMICalculatorView.swift */; };
 		0266E85E26A10AD3008ACFD3 /* BMIReviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0266E85D26A10AD3008ACFD3 /* BMIReviewView.swift */; };
 /* End PBXBuildFile section */
@@ -23,7 +22,6 @@
 		0266E84E26A0FE86008ACFD3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0266E85126A0FE86008ACFD3 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		0266E85326A0FE86008ACFD3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		0266E85926A0FF20008ACFD3 /* Input.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Input.swift; sourceTree = "<group>"; };
 		0266E85B26A10366008ACFD3 /* BMICalculatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BMICalculatorView.swift; sourceTree = "<group>"; };
 		0266E85D26A10AD3008ACFD3 /* BMIReviewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BMIReviewView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -60,7 +58,6 @@
 			children = (
 				0266E84A26A0FE85008ACFD3 /* BMI_CalculatorApp.swift */,
 				0266E84C26A0FE85008ACFD3 /* ContentView.swift */,
-				0266E85926A0FF20008ACFD3 /* Input.swift */,
 				0266E85B26A10366008ACFD3 /* BMICalculatorView.swift */,
 				0266E85D26A10AD3008ACFD3 /* BMIReviewView.swift */,
 				0266E84E26A0FE86008ACFD3 /* Assets.xcassets */,
@@ -147,7 +144,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0266E85A26A0FF20008ACFD3 /* Input.swift in Sources */,
 				0266E84D26A0FE85008ACFD3 /* ContentView.swift in Sources */,
 				0266E84B26A0FE85008ACFD3 /* BMI_CalculatorApp.swift in Sources */,
 				0266E85C26A10366008ACFD3 /* BMICalculatorView.swift in Sources */,

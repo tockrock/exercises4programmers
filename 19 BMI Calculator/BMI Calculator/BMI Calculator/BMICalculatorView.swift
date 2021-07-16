@@ -24,13 +24,12 @@ struct BMICalculatorView {
 extension BMICalculatorView: View {
     var body: some View {
         VStack {
-            Text(weight.tenth.description)
+            Text("\(weight.tenth.description)kg")
             Slider(value: $weight, in: minWeight...maxWeight)
-            Text(height.tenth.description)
+            Text("\(height.tenth.description)cm")
             Slider(value: $height, in: minHight...maxHeight)
-            HStack {
-                Text("BMI: \(bmi.description)")
-            }
+            BMIReviewView(bmi: bmi)
+            Spacer()
         }
     }
 }

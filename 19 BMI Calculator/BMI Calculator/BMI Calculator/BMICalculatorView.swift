@@ -8,13 +8,16 @@
 import SwiftUI
 
 struct BMICalculatorView {
-    let minWeight: Double = 0
-    let maxWeight: Double = 100
-    @State var weight: Double = 50
+    @State var inputWeight: Double = 50
+    @State var inputHeight: Double = 150
     
-    let minHight: Double = 100
-    let maxHeight: Double = 200
-    @State var height: Double = 150
+    var weight: Double {
+        inputWeight.tenth
+    }
+    
+    var height: Double {
+        inputHeight.tenth
+    }
     
     var bmi: Double {
         (weight / pow(height/100, 2)).tenth
@@ -24,10 +27,8 @@ struct BMICalculatorView {
 extension BMICalculatorView: View {
     var body: some View {
         VStack {
-            Text("\(weight.tenth.description)kg")
-            Slider(value: $weight, in: minWeight...maxWeight)
-            Text("\(height.tenth.description)cm")
-            Slider(value: $height, in: minHight...maxHeight)
+            InputSlider(value: $inputWeight, unit: .weight)
+            InputSlider(value: $inputHeight, unit: .height)
             BMIReviewView(bmi: bmi)
             Spacer()
         }

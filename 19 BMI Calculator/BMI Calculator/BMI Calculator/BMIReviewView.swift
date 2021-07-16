@@ -11,16 +11,7 @@ struct BMIReviewView {
     var bmi: Double
     
     var healthState: HealthState {
-        switch bmi {
-        case 25...:
-            return .over
-        case 18.5..<25:
-            return .healthy
-        case ..<18.5:
-            return .under
-        default:
-            return .healthy
-        }
+        HealthState.review(bmi: bmi)
     }
 }
 

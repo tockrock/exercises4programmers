@@ -15,6 +15,20 @@ enum HealthState: String {
 }
 
 extension HealthState {
+    static func review(bmi: Double) -> HealthState {
+        switch bmi {
+        case 25...:
+            return .over
+        case 18.5..<25:
+            return .healthy
+        case ..<18.5:
+            return .under
+        default:
+            // Something has gone wrong, but going to ignore it for now.
+            return .healthy
+        }
+    }
+
     var notice: String {
         switch self {
         case .over:

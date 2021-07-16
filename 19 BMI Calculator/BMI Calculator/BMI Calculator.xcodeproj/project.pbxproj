@@ -15,6 +15,7 @@
 		0266E85E26A10AD3008ACFD3 /* BMIReviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0266E85D26A10AD3008ACFD3 /* BMIReviewView.swift */; };
 		0266E86026A11256008ACFD3 /* BMIReview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0266E85F26A11256008ACFD3 /* BMIReview.swift */; };
 		0266E86226A112D7008ACFD3 /* InputSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0266E86126A112D7008ACFD3 /* InputSlider.swift */; };
+		0266E86426A11979008ACFD3 /* Unit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0266E86326A11979008ACFD3 /* Unit.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		0266E85D26A10AD3008ACFD3 /* BMIReviewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BMIReviewView.swift; sourceTree = "<group>"; };
 		0266E85F26A11256008ACFD3 /* BMIReview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BMIReview.swift; sourceTree = "<group>"; };
 		0266E86126A112D7008ACFD3 /* InputSlider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputSlider.swift; sourceTree = "<group>"; };
+		0266E86326A11979008ACFD3 /* Unit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Unit.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +66,7 @@
 				0266E84C26A0FE85008ACFD3 /* ContentView.swift */,
 				0266E85B26A10366008ACFD3 /* BMICalculatorView.swift */,
 				0266E86126A112D7008ACFD3 /* InputSlider.swift */,
+				0266E86326A11979008ACFD3 /* Unit.swift */,
 				0266E85D26A10AD3008ACFD3 /* BMIReviewView.swift */,
 				0266E85F26A11256008ACFD3 /* BMIReview.swift */,
 				0266E84E26A0FE86008ACFD3 /* Assets.xcassets */,
@@ -153,6 +156,7 @@
 				0266E86026A11256008ACFD3 /* BMIReview.swift in Sources */,
 				0266E86226A112D7008ACFD3 /* InputSlider.swift in Sources */,
 				0266E84D26A0FE85008ACFD3 /* ContentView.swift in Sources */,
+				0266E86426A11979008ACFD3 /* Unit.swift in Sources */,
 				0266E84B26A0FE85008ACFD3 /* BMI_CalculatorApp.swift in Sources */,
 				0266E85C26A10366008ACFD3 /* BMICalculatorView.swift in Sources */,
 				0266E85E26A10AD3008ACFD3 /* BMIReviewView.swift in Sources */,

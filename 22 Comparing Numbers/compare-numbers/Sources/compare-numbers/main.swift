@@ -5,34 +5,36 @@ func ask(_ question: String, fallback: String = "") -> String {
     return readLine() ?? fallback
 }
 
-func askForDouble(_ question: String, except previous: Set<Double> = []) -> Double {
+func askForDouble(_ question: String, except previous: Set<Double> = []) -> Double? {
     while true {
         let input = ask(question)
-        guard let input: Double = Double(input) else {
-            continue
-        }
-        guard !previous.contains(input) else {
-            continue
-        }
+        
+        guard input.count > 0 else { return nil }
+        guard let input: Double = Double(input) else { continue }
+        guard !previous.contains(input) else { continue }
         
         return input
     }
 }
 
 func largerOf(_ first: Double, and second: Double) -> Double {
-    if first > second {
-        return first
-    }
+    if first > second { return first }
     return second
 }
 
 struct CompareNumbers: ParsableCommand {
     func run() throws {
         var numbers: Set<Double> = []
-        numbers.insert(askForDouble("Enter the first number", except: numbers))
-        numbers.insert(askForDouble("Enter the second number", except: numbers))
-        numbers.insert(askForDouble("Enter the third number", except: numbers))
-
+        while true {
+            let input = askForDouble("Enter the \(numbers.count + 1) number", except: numbers)
+            guard let input = input else {
+                guard !numbers.isEmpty else { continue }
+                break
+            }
+            
+            numbers.insert(input)
+        }
+        
         var max = numbers.removeFirst()
 
         while !numbers.isEmpty {

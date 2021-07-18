@@ -1,7 +1,7 @@
 import XCTest
 import class Foundation.Bundle
 
-final class _2_Comparing_NumbersTests: XCTestCase {
+final class compare_numbersTests: XCTestCase {
     func testExample() throws {
         // This is an example of a functional test case.
         // Use XCTAssert and related functions to verify your tests produce the correct
@@ -15,7 +15,7 @@ final class _2_Comparing_NumbersTests: XCTestCase {
         // Mac Catalyst won't have `Process`, but it is supported for executables.
         #if !targetEnvironment(macCatalyst)
 
-        let fooBinary = productsDirectory.appendingPathComponent("22 Comparing Numbers")
+        let fooBinary = productsDirectory.appendingPathComponent("compare-numbers")
 
         let process = Process()
         process.executableURL = fooBinary

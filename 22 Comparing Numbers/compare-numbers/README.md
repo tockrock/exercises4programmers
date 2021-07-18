@@ -1,3 +1,3 @@
-# 22 Comparing Numbers
+# compare-numbers
 
 A description of this package.

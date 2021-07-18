@@ -18,9 +18,12 @@ func askForDouble(_ question: String) -> Double {
 
 struct CompareNumbers: ParsableCommand {
     func run() throws {
-        let number = askForDouble("Enter the first number")
+        var numbers: [Double] = []
+        numbers.append(askForDouble("Enter the first number"))
+        numbers.append(askForDouble("Enter the second number"))
+        numbers.append(askForDouble("Enter the third number"))
         
-        print("You've entered the number \(number)")
+        print("You've entered the numbers \(numbers)")
     }
 }
 

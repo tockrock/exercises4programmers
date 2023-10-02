@@ -9,6 +9,7 @@ import ArgumentParser
 @main
 struct saying_hello_cli: ParsableCommand {
     mutating func run() throws {
-        print("Hello, world!")
+        print("What is your name?", terminator: " ")
+        print("Hello, " + readLine()! + ", nice to meet you!")
     }
 }

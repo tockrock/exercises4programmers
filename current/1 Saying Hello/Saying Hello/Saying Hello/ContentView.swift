@@ -9,12 +9,12 @@ import SwiftUI
 import Observation
 
 struct ContentView: View {
+    @Bindable var model: GreetingModel = GreetingModel()
+    
     var body: some View {
         VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+            Text(model.greeting)
+            TextField("Name", text: $model.name)
         }
         .padding()
     }

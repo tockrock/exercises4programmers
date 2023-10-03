@@ -33,7 +33,7 @@ struct ContentView: View {
 @Observable class GreetingModel {
     var name: String = ""
     var greeting: String {
-        guard !name.isEmpty else { return "" }
+        guard !name.isEmpty else { return " " }
         return "Hello, \(name)! Nice to meet you!"
     }
 }

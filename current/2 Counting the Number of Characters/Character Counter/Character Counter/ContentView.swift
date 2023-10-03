@@ -24,6 +24,7 @@ struct ContentView: View {
     var body: some View {
         VStack {
             Text(model.output)
+                .foregroundStyle(.secondary)
             TextField("Text", text: $model.input)
         }
         .padding()

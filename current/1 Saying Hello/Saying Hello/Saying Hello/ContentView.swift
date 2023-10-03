@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import Observation
 
 struct ContentView: View {
     var body: some View {
@@ -27,4 +28,12 @@ struct ContentView: View {
 #Preview("Dark") {
     ContentView()
         .preferredColorScheme(.dark)
+}
+
+@Observable class GreetingModel {
+    var name: String = ""
+    var greeting: String {
+        guard !name.isEmpty else { return "" }
+        return "Hello, \(name)! Nice to meet you!"
+    }
 }

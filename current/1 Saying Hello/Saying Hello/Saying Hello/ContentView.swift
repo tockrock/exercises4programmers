@@ -8,6 +8,14 @@
 import SwiftUI
 import Observation
 
+@Observable class GreetingModel {
+    var name: String = ""
+    var greeting: String {
+        guard !name.isEmpty else { return " " }
+        return "Hello, \(name)! Nice to meet you!"
+    }
+}
+
 struct ContentView: View {
     @Bindable var model: GreetingModel = GreetingModel()
     
@@ -22,12 +30,4 @@ struct ContentView: View {
 
 #Preview() {
     ContentView()
-}
-
-@Observable class GreetingModel {
-    var name: String = ""
-    var greeting: String {
-        guard !name.isEmpty else { return " " }
-        return "Hello, \(name)! Nice to meet you!"
-    }
 }

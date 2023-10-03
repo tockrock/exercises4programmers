@@ -20,14 +20,8 @@ struct ContentView: View {
     }
 }
 
-#Preview("light") {
+#Preview() {
     ContentView()
-        .preferredColorScheme(.light)
-}
-
-#Preview("Dark") {
-    ContentView()
-        .preferredColorScheme(.dark)
 }
 
 @Observable class GreetingModel {

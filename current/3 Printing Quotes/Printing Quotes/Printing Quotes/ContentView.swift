@@ -16,7 +16,7 @@ import Observation
         guard !attribute.isEmpty && !quote.isEmpty else {
             return " "
         }
-        let output = attribute + " says, \"" + quote + "\""
+        let output = attribute.trimmingCharacters(in: .whitespacesAndNewlines) + " says, \"" + quote.trimmingCharacters(in: .whitespacesAndNewlines) + "\""
         return output
     }
 }
@@ -30,6 +30,10 @@ struct ContentView: View {
             TextField("Quote", text: $model.quote)
             TextField("By", text: $model.attribute)
             Text(model.attributed_quote)
+                .foregroundStyle(Color.secondary)
+                .padding(.vertical)
+                .frame(maxWidth: .infinity)
+                .border(Color.black)
         }
         .padding()
     }

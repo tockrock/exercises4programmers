@@ -8,12 +8,13 @@
 import SwiftUI
 
 struct ContentView: View {
+    @Bindable var model = InputModel()
+    
     var body: some View {
         VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+            TextField("Current Age", text: $model.ageInput)
+            TextField("Retirement Age", text: $model.retirementAgeInput)
+            Text(model.output)
         }
         .padding()
     }

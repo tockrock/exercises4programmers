@@ -14,6 +14,7 @@
 		02FE177A2ACED0AD00DB6AAD /* Retirement_CalculatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02FE17792ACED0AD00DB6AAD /* Retirement_CalculatorTests.swift */; };
 		02FE17842ACED0AD00DB6AAD /* Retirement_CalculatorUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02FE17832ACED0AD00DB6AAD /* Retirement_CalculatorUITests.swift */; };
 		02FE17862ACED0AD00DB6AAD /* Retirement_CalculatorUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02FE17852ACED0AD00DB6AAD /* Retirement_CalculatorUITestsLaunchTests.swift */; };
+		02FE17932ACED11500DB6AAD /* calculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02FE17922ACED11500DB6AAD /* calculator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +45,7 @@
 		02FE177F2ACED0AD00DB6AAD /* Retirement CalculatorUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Retirement CalculatorUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		02FE17832ACED0AD00DB6AAD /* Retirement_CalculatorUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Retirement_CalculatorUITests.swift; sourceTree = "<group>"; };
 		02FE17852ACED0AD00DB6AAD /* Retirement_CalculatorUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Retirement_CalculatorUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		02FE17922ACED11500DB6AAD /* calculator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = calculator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,6 +98,7 @@
 			children = (
 				02FE17682ACED0AA00DB6AAD /* Retirement_CalculatorApp.swift */,
 				02FE176A2ACED0AA00DB6AAD /* ContentView.swift */,
+				02FE17922ACED11500DB6AAD /* calculator.swift */,
 				02FE176C2ACED0AC00DB6AAD /* Assets.xcassets */,
 				02FE176E2ACED0AC00DB6AAD /* Preview Content */,
 			);
@@ -257,6 +260,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				02FE17932ACED11500DB6AAD /* calculator.swift in Sources */,
 				02FE176B2ACED0AA00DB6AAD /* ContentView.swift in Sources */,
 				02FE17692ACED0AA00DB6AAD /* Retirement_CalculatorApp.swift in Sources */,
 			);

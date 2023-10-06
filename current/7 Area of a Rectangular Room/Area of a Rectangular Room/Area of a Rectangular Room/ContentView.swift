@@ -8,27 +8,31 @@
 import SwiftUI
 import Observation
 
-let sqFeet2Meter = 0.09290304
-
 @Observable class RoomModel {
     var lenghtInput = ""
     var widthInput = ""
     
-    var length: Int? { Int(lenghtInput) }
-    var width: Int? { Int(widthInput) }
+    var length: Double? { Double(lenghtInput) }
+    var width: Double? { Double(widthInput) }
     
     var output: String {
-        guard let length,
-              let width else {
-            return "Please fill the fields above"
+        guard let length, let width, 
+              0 < length, 0 < width else {
+            return "Please fill positive numbers in the fields above."
         }
+
+        let unitLength = Measurement(value: length, unit: UnitLength.feet)
+        let unitWidth = Measurement(value: width, unit: UnitLength.feet)
+        let area = length * width
+        let areaSqFeet = Measurement(value: area, unit: UnitArea.squareFeet)
+        let areaSqMeter = areaSqFeet.converted(to: .squareMeters)
         
         return """
-        You entered dimention of \(length) feet by \(width) feet.
-        The area is
+        You entered dimention of \(unitLength) by \(unitWidth).
         
-        \(length * width) square feet
-        \(Double(length * width) * sqFeet2Meter) square meters
+        The area is
+        \(areaSqFeet)
+        \(areaSqMeter)
         """
         
     }

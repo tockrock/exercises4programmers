@@ -1,0 +1,593 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		02FE17A12AD04E8200DB6AAD /* Area_of_a_Rectangular_RoomApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02FE17A02AD04E8200DB6AAD /* Area_of_a_Rectangular_RoomApp.swift */; };
+		02FE17A32AD04E8200DB6AAD /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02FE17A22AD04E8200DB6AAD /* ContentView.swift */; };
+		02FE17A52AD04E8500DB6AAD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 02FE17A42AD04E8500DB6AAD /* Assets.xcassets */; };
+		02FE17A82AD04E8500DB6AAD /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 02FE17A72AD04E8500DB6AAD /* Preview Assets.xcassets */; };
+		02FE17B22AD04E8600DB6AAD /* Area_of_a_Rectangular_RoomTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02FE17B12AD04E8600DB6AAD /* Area_of_a_Rectangular_RoomTests.swift */; };
+		02FE17BC2AD04E8600DB6AAD /* Area_of_a_Rectangular_RoomUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02FE17BB2AD04E8600DB6AAD /* Area_of_a_Rectangular_RoomUITests.swift */; };
+		02FE17BE2AD04E8600DB6AAD /* Area_of_a_Rectangular_RoomUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02FE17BD2AD04E8600DB6AAD /* Area_of_a_Rectangular_RoomUITestsLaunchTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		02FE17AE2AD04E8600DB6AAD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 02FE17952AD04E8200DB6AAD /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 02FE179C2AD04E8200DB6AAD;
+			remoteInfo = "Area of a Rectangular Room";
+		};
+		02FE17B82AD04E8600DB6AAD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 02FE17952AD04E8200DB6AAD /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 02FE179C2AD04E8200DB6AAD;
+			remoteInfo = "Area of a Rectangular Room";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		02FE179D2AD04E8200DB6AAD /* Area of a Rectangular Room.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Area of a Rectangular Room.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		02FE17A02AD04E8200DB6AAD /* Area_of_a_Rectangular_RoomApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Area_of_a_Rectangular_RoomApp.swift; sourceTree = "<group>"; };
+		02FE17A22AD04E8200DB6AAD /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		02FE17A42AD04E8500DB6AAD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		02FE17A72AD04E8500DB6AAD /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		02FE17AD2AD04E8600DB6AAD /* Area of a Rectangular RoomTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Area of a Rectangular RoomTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		02FE17B12AD04E8600DB6AAD /* Area_of_a_Rectangular_RoomTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Area_of_a_Rectangular_RoomTests.swift; sourceTree = "<group>"; };
+		02FE17B72AD04E8600DB6AAD /* Area of a Rectangular RoomUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Area of a Rectangular RoomUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		02FE17BB2AD04E8600DB6AAD /* Area_of_a_Rectangular_RoomUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Area_of_a_Rectangular_RoomUITests.swift; sourceTree = "<group>"; };
+		02FE17BD2AD04E8600DB6AAD /* Area_of_a_Rectangular_RoomUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Area_of_a_Rectangular_RoomUITestsLaunchTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		02FE179A2AD04E8200DB6AAD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		02FE17AA2AD04E8600DB6AAD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		02FE17B42AD04E8600DB6AAD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		02FE17942AD04E8200DB6AAD = {
+			isa = PBXGroup;
+			children = (
+				02FE179F2AD04E8200DB6AAD /* Area of a Rectangular Room */,
+				02FE17B02AD04E8600DB6AAD /* Area of a Rectangular RoomTests */,
+				02FE17BA2AD04E8600DB6AAD /* Area of a Rectangular RoomUITests */,
+				02FE179E2AD04E8200DB6AAD /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		02FE179E2AD04E8200DB6AAD /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				02FE179D2AD04E8200DB6AAD /* Area of a Rectangular Room.app */,
+				02FE17AD2AD04E8600DB6AAD /* Area of a Rectangular RoomTests.xctest */,
+				02FE17B72AD04E8600DB6AAD /* Area of a Rectangular RoomUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		02FE179F2AD04E8200DB6AAD /* Area of a Rectangular Room */ = {
+			isa = PBXGroup;
+			children = (
+				02FE17A02AD04E8200DB6AAD /* Area_of_a_Rectangular_RoomApp.swift */,
+				02FE17A22AD04E8200DB6AAD /* ContentView.swift */,
+				02FE17A42AD04E8500DB6AAD /* Assets.xcassets */,
+				02FE17A62AD04E8500DB6AAD /* Preview Content */,
+			);
+			path = "Area of a Rectangular Room";
+			sourceTree = "<group>";
+		};
+		02FE17A62AD04E8500DB6AAD /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				02FE17A72AD04E8500DB6AAD /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		02FE17B02AD04E8600DB6AAD /* Area of a Rectangular RoomTests */ = {
+			isa = PBXGroup;
+			children = (
+				02FE17B12AD04E8600DB6AAD /* Area_of_a_Rectangular_RoomTests.swift */,
+			);
+			path = "Area of a Rectangular RoomTests";
+			sourceTree = "<group>";
+		};
+		02FE17BA2AD04E8600DB6AAD /* Area of a Rectangular RoomUITests */ = {
+			isa = PBXGroup;
+			children = (
+				02FE17BB2AD04E8600DB6AAD /* Area_of_a_Rectangular_RoomUITests.swift */,
+				02FE17BD2AD04E8600DB6AAD /* Area_of_a_Rectangular_RoomUITestsLaunchTests.swift */,
+			);
+			path = "Area of a Rectangular RoomUITests";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		02FE179C2AD04E8200DB6AAD /* Area of a Rectangular Room */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 02FE17C12AD04E8600DB6AAD /* Build configuration list for PBXNativeTarget "Area of a Rectangular Room" */;
+			buildPhases = (
+				02FE17992AD04E8200DB6AAD /* Sources */,
+				02FE179A2AD04E8200DB6AAD /* Frameworks */,
+				02FE179B2AD04E8200DB6AAD /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Area of a Rectangular Room";
+			productName = "Area of a Rectangular Room";
+			productReference = 02FE179D2AD04E8200DB6AAD /* Area of a Rectangular Room.app */;
+			productType = "com.apple.product-type.application";
+		};
+		02FE17AC2AD04E8600DB6AAD /* Area of a Rectangular RoomTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 02FE17C42AD04E8600DB6AAD /* Build configuration list for PBXNativeTarget "Area of a Rectangular RoomTests" */;
+			buildPhases = (
+				02FE17A92AD04E8600DB6AAD /* Sources */,
+				02FE17AA2AD04E8600DB6AAD /* Frameworks */,
+				02FE17AB2AD04E8600DB6AAD /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				02FE17AF2AD04E8600DB6AAD /* PBXTargetDependency */,
+			);
+			name = "Area of a Rectangular RoomTests";
+			productName = "Area of a Rectangular RoomTests";
+			productReference = 02FE17AD2AD04E8600DB6AAD /* Area of a Rectangular RoomTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		02FE17B62AD04E8600DB6AAD /* Area of a Rectangular RoomUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 02FE17C72AD04E8600DB6AAD /* Build configuration list for PBXNativeTarget "Area of a Rectangular RoomUITests" */;
+			buildPhases = (
+				02FE17B32AD04E8600DB6AAD /* Sources */,
+				02FE17B42AD04E8600DB6AAD /* Frameworks */,
+				02FE17B52AD04E8600DB6AAD /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				02FE17B92AD04E8600DB6AAD /* PBXTargetDependency */,
+			);
+			name = "Area of a Rectangular RoomUITests";
+			productName = "Area of a Rectangular RoomUITests";
+			productReference = 02FE17B72AD04E8600DB6AAD /* Area of a Rectangular RoomUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		02FE17952AD04E8200DB6AAD /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1500;
+				LastUpgradeCheck = 1500;
+				TargetAttributes = {
+					02FE179C2AD04E8200DB6AAD = {
+						CreatedOnToolsVersion = 15.0;
+					};
+					02FE17AC2AD04E8600DB6AAD = {
+						CreatedOnToolsVersion = 15.0;
+						TestTargetID = 02FE179C2AD04E8200DB6AAD;
+					};
+					02FE17B62AD04E8600DB6AAD = {
+						CreatedOnToolsVersion = 15.0;
+						TestTargetID = 02FE179C2AD04E8200DB6AAD;
+					};
+				};
+			};
+			buildConfigurationList = 02FE17982AD04E8200DB6AAD /* Build configuration list for PBXProject "Area of a Rectangular Room" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 02FE17942AD04E8200DB6AAD;
+			productRefGroup = 02FE179E2AD04E8200DB6AAD /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				02FE179C2AD04E8200DB6AAD /* Area of a Rectangular Room */,
+				02FE17AC2AD04E8600DB6AAD /* Area of a Rectangular RoomTests */,
+				02FE17B62AD04E8600DB6AAD /* Area of a Rectangular RoomUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		02FE179B2AD04E8200DB6AAD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				02FE17A82AD04E8500DB6AAD /* Preview Assets.xcassets in Resources */,
+				02FE17A52AD04E8500DB6AAD /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		02FE17AB2AD04E8600DB6AAD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		02FE17B52AD04E8600DB6AAD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		02FE17992AD04E8200DB6AAD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				02FE17A32AD04E8200DB6AAD /* ContentView.swift in Sources */,
+				02FE17A12AD04E8200DB6AAD /* Area_of_a_Rectangular_RoomApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		02FE17A92AD04E8600DB6AAD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				02FE17B22AD04E8600DB6AAD /* Area_of_a_Rectangular_RoomTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		02FE17B32AD04E8600DB6AAD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				02FE17BE2AD04E8600DB6AAD /* Area_of_a_Rectangular_RoomUITestsLaunchTests.swift in Sources */,
+				02FE17BC2AD04E8600DB6AAD /* Area_of_a_Rectangular_RoomUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		02FE17AF2AD04E8600DB6AAD /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 02FE179C2AD04E8200DB6AAD /* Area of a Rectangular Room */;
+			targetProxy = 02FE17AE2AD04E8600DB6AAD /* PBXContainerItemProxy */;
+		};
+		02FE17B92AD04E8600DB6AAD /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 02FE179C2AD04E8200DB6AAD /* Area of a Rectangular Room */;
+			targetProxy = 02FE17B82AD04E8600DB6AAD /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		02FE17BF2AD04E8600DB6AAD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		02FE17C02AD04E8600DB6AAD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		02FE17C22AD04E8600DB6AAD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Area of a Rectangular Room/Preview Content\"";
+				DEVELOPMENT_TEAM = 9Q739244N5;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.standard-apps.Area-of-a-Rectangular-Room";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		02FE17C32AD04E8600DB6AAD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Area of a Rectangular Room/Preview Content\"";
+				DEVELOPMENT_TEAM = 9Q739244N5;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.standard-apps.Area-of-a-Rectangular-Room";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		02FE17C52AD04E8600DB6AAD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 9Q739244N5;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.standard-apps.Area-of-a-Rectangular-RoomTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Area of a Rectangular Room.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Area of a Rectangular Room";
+			};
+			name = Debug;
+		};
+		02FE17C62AD04E8600DB6AAD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 9Q739244N5;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.standard-apps.Area-of-a-Rectangular-RoomTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Area of a Rectangular Room.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Area of a Rectangular Room";
+			};
+			name = Release;
+		};
+		02FE17C82AD04E8600DB6AAD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 9Q739244N5;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.standard-apps.Area-of-a-Rectangular-RoomUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Area of a Rectangular Room";
+			};
+			name = Debug;
+		};
+		02FE17C92AD04E8600DB6AAD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 9Q739244N5;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.standard-apps.Area-of-a-Rectangular-RoomUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Area of a Rectangular Room";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		02FE17982AD04E8200DB6AAD /* Build configuration list for PBXProject "Area of a Rectangular Room" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				02FE17BF2AD04E8600DB6AAD /* Debug */,
+				02FE17C02AD04E8600DB6AAD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		02FE17C12AD04E8600DB6AAD /* Build configuration list for PBXNativeTarget "Area of a Rectangular Room" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				02FE17C22AD04E8600DB6AAD /* Debug */,
+				02FE17C32AD04E8600DB6AAD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		02FE17C42AD04E8600DB6AAD /* Build configuration list for PBXNativeTarget "Area of a Rectangular RoomTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				02FE17C52AD04E8600DB6AAD /* Debug */,
+				02FE17C62AD04E8600DB6AAD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		02FE17C72AD04E8600DB6AAD /* Build configuration list for PBXNativeTarget "Area of a Rectangular RoomUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				02FE17C82AD04E8600DB6AAD /* Debug */,
+				02FE17C92AD04E8600DB6AAD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 02FE17952AD04E8200DB6AAD /* Project object */;
+}

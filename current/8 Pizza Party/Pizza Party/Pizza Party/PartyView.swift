@@ -1,5 +1,5 @@
 //
-//  ContentView.swift
+//  PartyView.swift
 //  Pizza Party
 //
 //  Created by 鈴木剛 on 2023/10/08.
@@ -58,11 +58,11 @@ import Observation
     }
 }
 
-struct ContentView {
+struct PartyView {
     @Bindable var model = PartyModel()
 }
 
-extension ContentView: View {
+extension PartyView: View {
     var body: some View {
         VStack {
             TextField("People Count", text: $model.peopleInput)
@@ -79,5 +79,5 @@ extension ContentView: View {
 }
 
 #Preview {
-    ContentView()
+    PartyView()
 }

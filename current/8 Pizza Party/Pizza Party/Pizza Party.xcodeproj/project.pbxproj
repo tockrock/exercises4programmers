@@ -14,6 +14,7 @@
 		02FE17E82AD2928800DB6AAD /* Pizza_PartyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02FE17E72AD2928800DB6AAD /* Pizza_PartyTests.swift */; };
 		02FE17F22AD2928800DB6AAD /* Pizza_PartyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02FE17F12AD2928800DB6AAD /* Pizza_PartyUITests.swift */; };
 		02FE17F42AD2928800DB6AAD /* Pizza_PartyUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02FE17F32AD2928800DB6AAD /* Pizza_PartyUITestsLaunchTests.swift */; };
+		02FE18012AD29E6C00DB6AAD /* PrepView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02FE18002AD29E6C00DB6AAD /* PrepView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +45,7 @@
 		02FE17ED2AD2928800DB6AAD /* Pizza PartyUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Pizza PartyUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		02FE17F12AD2928800DB6AAD /* Pizza_PartyUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pizza_PartyUITests.swift; sourceTree = "<group>"; };
 		02FE17F32AD2928800DB6AAD /* Pizza_PartyUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pizza_PartyUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		02FE18002AD29E6C00DB6AAD /* PrepView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrepView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,6 +98,7 @@
 			children = (
 				02FE17D62AD2928600DB6AAD /* Pizza_PartyApp.swift */,
 				02FE17D82AD2928600DB6AAD /* ContentView.swift */,
+				02FE18002AD29E6C00DB6AAD /* PrepView.swift */,
 				02FE17DA2AD2928800DB6AAD /* Assets.xcassets */,
 				02FE17DC2AD2928800DB6AAD /* Preview Content */,
 			);
@@ -259,6 +262,7 @@
 			files = (
 				02FE17D92AD2928600DB6AAD /* ContentView.swift in Sources */,
 				02FE17D72AD2928600DB6AAD /* Pizza_PartyApp.swift in Sources */,
+				02FE18012AD29E6C00DB6AAD /* PrepView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

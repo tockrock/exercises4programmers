@@ -11,7 +11,16 @@ import SwiftUI
 struct Pizza_PartyApp: App {
     var body: some Scene {
         WindowGroup {
-            PartyView()
+            TabView {
+                PrepView()
+                    .tabItem {
+                        Label("Prepare", systemImage: "pencil.and.list.clipboard")
+                    }
+                PartyView()
+                    .tabItem {
+                        Label("Party Time", systemImage: "party.popper")
+                    }
+            }
         }
     }
 }
